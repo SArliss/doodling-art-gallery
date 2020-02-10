@@ -32,7 +32,7 @@ Created, designed and developed by Sinara Arliss on February 2020, as unit 4 pro
 
 ## MVP
 
-The **Doodling Art Gallery** MVP will allow users to register and login via React front-end using a Registration system of email/name/password and login using email/password. It will utilize a token-based local-login storage for persistence. As well as a fully bcrypt hashed password for security. Doodling Art Gallery is a full CRUD app and users will be able to create, update, save and delete doodles. The app will be deployed via Surge (front-end) and via Heroku (back-end).
+The **Doodling Art Gallery** MVP will allow users to register and login via React front-end using a Registration system of email/name/password and login using email/password. It will utilize a token-based local-login storage for persistence. As well as a fully bcrypt hashed password for security. Doodling Art Gallery is a full CRUD app and users will be able to create, update, save and delete their doodling art. The app will be deployed via Surge (front-end) and via Heroku (back-end).
 
 ### MVP Goals
 
@@ -65,18 +65,22 @@ The **Doodling Art Gallery** MVP will allow users to register and login via Reac
 
 #### Wireframes
 
-Desktop Landing
+Landing Page
 
-![Landing page](wireframes/wf-main.png)
+![Landing page](wireframes/wf-landing.png)
 
-Desktop Personal Gallery
+Drawing Page
 
-![Personal gallery](wireframes/personal-gallery1.png)
+![Landing page](wireframes/wf-drawing.png)
+
+Personal Gallery
+
+![Personal gallery](wireframes/wf-private-gallery.png)
 Mobile
 
-Desktop Public Gallery
+Public Gallery
 
-![Public Gallery ](wireframes/public.png)
+![Public Gallery ](wireframes/wf-public-gallery.png)
 
 
 #### Component Hierarchy
@@ -134,7 +138,7 @@ src
 
 #### ERD Model
 
-![Model](wireframes/erd.png)
+![Model](wireframes/wf-erd.png)
 
 #### Data Heirarchy
 
@@ -157,8 +161,8 @@ database_db
 
 ## Reference Projects
 
-  - quickdraw.withgoogle.com
-  - pspdfkit.com/blog/2017/how-to-build-free-hand-drawing-using-react
+  - http://quickdraw.withgoogle.com
+  - http://pspdfkit.com/blog/2017/how-to-build-free-hand-drawing-using-react
 
 ***
 
