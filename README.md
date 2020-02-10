@@ -145,9 +145,9 @@ src
 ``` structure
 
 database_db
-|__ one user has zero or many doodles
-|__ zero or many doodles belong to one user
-|__ one category has zero or many doodles
+|__ A user can have zero or many doodles
+|__ Zero or many doodles can belong to a user
+|__ One category can have zero or many doodles
 
 ```
 
