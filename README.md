@@ -76,7 +76,6 @@ Drawing Page
 Personal Gallery
 
 ![Personal gallery](wireframes/wf-private-gallery.png)
-Mobile
 
 Public Gallery
 
