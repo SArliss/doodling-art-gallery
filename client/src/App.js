@@ -70,7 +70,7 @@ class App extends React.Component {
           onMouseDown={this.handleMouseDown}
           onMouseMove={this.handleMouseMove}
         >
-          <Drawing lines={this.state.lines} />
+          <Drawing lines={this.state.lines}/>
         </div>
 
       </div>
