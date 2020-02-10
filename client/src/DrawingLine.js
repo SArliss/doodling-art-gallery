@@ -7,7 +7,7 @@ function DrawingLine({ line }) {
         return `${p.get('x')} ${p.get('y')}`;
       })
       .join(" L ");
-
+      console.log(pathData)
   return <path className="path" d={pathData} />;
 }
 
