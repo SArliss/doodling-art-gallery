@@ -36,7 +36,7 @@ The **Doodling Art Gallery** MVP will allow users to register and login via Reac
 
 ### MVP Goals
 
-- 2 Modeled tables: users and doodles.
+- 3 Modeled tables: users, doodles and categories.
 - Full CRUD showcasing in the following features: 
   - Creating: Users/Doodles.
   - Posting/Updating/Deleting: doodles. 
@@ -147,6 +147,7 @@ src
 database_db
 |__ one user has zero or many doodles
 |__ zero or many doodles belong to one user
+|__ one category has zero or many doodles
 
 ```
 
