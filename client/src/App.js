@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
-import DrawArea from './DrawArea.js';
+
+//custom components
+import DrawArea from './Components/DrawArea.js';
+import Footer from './Components/Footer.js';
+import Header from './Components/Header.js';
+
 
 class App extends React.Component {
   constructor() {
@@ -12,11 +17,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>Doodling Art Gallery</h1>
-        </header>
 
-        < DrawArea />
+        <Header />
+
+        <DrawArea />
+
+        <Footer />
 
       </div>
     );
