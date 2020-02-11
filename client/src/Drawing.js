@@ -1,14 +1,25 @@
 import React from 'react';
-import DrawingLine from './DrawingLine.js'
 
 function Drawing({ lines }) {
+  let pathData = ""
+  lines.map((line, index) => (
+    pathData = "M " + line.map(p => (
+      `${p.get('x')} ${p.get('y')}`)).join(" L ")))
+  
+  console.log(pathData)
+  
   return (
     <svg className="drawing">
       {lines.map((line, index) => (
-        <DrawingLine key={index} line={line} />
+        <path
+          key={index}
+          className="path"
+          d={"M " + line.map(p => (
+            `${p.get('x')} ${p.get('y')}`)).join(" L ")}
+        />
       ))}
-    </svg>
-  );
+      </svg>
+  )
 }
 
 export default Drawing;
