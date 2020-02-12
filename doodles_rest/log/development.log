@@ -2599,3 +2599,295 @@ Processing by DoodlesController#index as */*
 Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1647)
 
 
+Started GET "/categories" for ::1 at 2020-02-12 11:04:51 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.1) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200212151737)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200212151737"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/categories" for ::1 at 2020-02-12 11:23:43 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 641)
+
+
+Started GET "/categories/" for ::1 at 2020-02-12 11:23:59 -0500
+Processing by CategoriesController#index as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "category"=>{}}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 96)
+
+
+Started GET "/signup" for ::1 at 2020-02-12 11:24:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/signup" for ::1 at 2020-02-12 11:25:11 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"name"=>"suresh", "email"=>"sureshsigera@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "suresh"], ["email", "sureshsigera@gmail.com"], ["password_digest", "$2a$12$TxfMrSvPQE.W9Kvqcl0TAumHwZiFYkpZIWe/lithQP45sUZZz37vi"], ["created_at", "2020-02-12 16:25:11.714195"], ["updated_at", "2020-02-12 16:25:11.714195"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sureshsigera@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sureshsigera@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 201 Created in 653ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 7738)
+
+
+Started POST "/categories" for ::1 at 2020-02-12 11:25:49 -0500
+Processing by CategoriesController#create as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category"=>{"name"=>"suresh"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+[31mUnpermitted parameters: :email, :password, :password_confirmation, :category[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:12:in `create'
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "suresh"], ["created_at", "2020-02-12 16:25:49.198919"], ["updated_at", "2020-02-12 16:25:49.198919"]]
+  ↳ app/controllers/categories_controller.rb:12:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:12:in `create'
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 4852)
+
+
+Started GET "/categories" for ::1 at 2020-02-12 11:25:58 -0500
+Processing by CategoriesController#index as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category"=>{"name"=>"suresh"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 2179)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-12 11:28:19 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"1", "category"=>{"name"=>"suresh"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 11:28:31 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "doodle"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.6ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", "1"]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 3.6ms | Allocations: 3693)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 11:28:46 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "id"=>"1", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category_doodle'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/categories/1/doodles/2" for ::1 at 2020-02-12 11:28:57 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "id"=>"2", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category_doodle'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 2047)
+
+
+Started GET "/categories/1/doodles/3" for ::1 at 2020-02-12 11:29:02 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "id"=>"3", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category_doodle'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 2047)
+
+
+Started GET "/categories/1/doodles/4" for ::1 at 2020-02-12 11:29:22 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "id"=>"4", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category_doodle'
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1964)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 11:29:26 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "id"=>"1", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.4ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category_doodle'
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 2047)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-12 11:29:40 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"1", "category"=>{"name"=>"suresh"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1271)
+
+
+Started GET "/categories" for ::1 at 2020-02-12 11:29:42 -0500
+Processing by CategoriesController#index as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category"=>{"name"=>"suresh"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 2145)
+
+
+Started GET "/categories/doodles" for ::1 at 2020-02-12 11:29:55 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "id"=>"doodles", "category"=>{"name"=>"suresh"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1168)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 11:30:04 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "doodle"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", "1"]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1938)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 11:30:09 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "id"=>"1", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category_doodle'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 2047)
+
+
+Started GET "/categories/1/doodles/" for ::1 at 2020-02-12 11:30:17 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", "1"]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1939)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 11:30:38 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"name"=>"suresh", "email"=>"sureshsigera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "category_id"=>"1", "doodle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", "1"]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 1938)
+
+

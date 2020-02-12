@@ -4,7 +4,9 @@ class DoodlesController < ApplicationController
 
   # GET /categories/:category_id/doodles
   def index
-    json_response(@category.doodles)
+    @doodles = current_user.doodles
+    json_response(@doodles)
+    #json_response(@category.doodles)
   end
 
   # GET /categories/:category_id/doodles/:id
@@ -34,7 +36,7 @@ class DoodlesController < ApplicationController
   private
 
   def doodle_params
-    params.permit(:title, :path, :created_by)
+    params.permit(:title, :path)
   end
 
   def set_category
