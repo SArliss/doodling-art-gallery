@@ -2069,3 +2069,533 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 1.1ms | Allocations: 5010)
 
 
+Started GET "/categories" for ::1 at 2020-02-12 09:17:54 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.7ms | Allocations: 1461)
+
+
+Started GET "/categories" for ::1 at 2020-02-12 09:17:55 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.7ms | Allocations: 1451)
+
+
+Started GET "/categories" for ::1 at 2020-02-12 09:17:56 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1451)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 09:20:27 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.8ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 86ms (Views: 54.0ms | ActiveRecord: 2.4ms | Allocations: 8583)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-12 09:20:31 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 667)
+
+
+Started GET "/categories/" for ::1 at 2020-02-12 09:23:05 -0500
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1454)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 09:23:31 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1790)
+
+
+Started GET "/categories/2/doodles" for ::1 at 2020-02-12 09:23:37 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1331)
+
+
+Started GET "/categories/0/doodles" for ::1 at 2020-02-12 09:23:46 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"0"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 567)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 09:23:50 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1790)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 09:23:57 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1436)
+
+
+Started GET "/categories/1/doodles/3" for ::1 at 2020-02-12 09:24:00 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"3"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1413)
+
+
+Started GET "/categories/1/doodles/6" for ::1 at 2020-02-12 09:24:04 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 404 Not Found in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1361)
+
+
+Started GET "/categories/1/doodles/4" for ::1 at 2020-02-12 09:24:08 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"4"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1349)
+
+
+Started GET "/categories/1/doodles/3" for ::1 at 2020-02-12 09:24:10 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1413)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 09:24:32 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1413)
+
+
+Started GET "/categories/1/doodles/" for ::1 at 2020-02-12 09:24:34 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1790)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 09:24:52 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1413)
+
+
+Started GET "/categories/2/doodles" for ::1 at 2020-02-12 09:25:02 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1332)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 09:25:05 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1790)
+
+
+Started GET "/categories/1/doodles/2" for ::1 at 2020-02-12 09:25:09 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"category_id"=>"1", "id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1413)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 09:25:15 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1411)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 09:27:08 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1788)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 09:27:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 30ms (Views: 11.0ms | ActiveRecord: 1.6ms | Allocations: 8998)
+
+
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-12 09:27:59 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1463)
+
+
+Started GET "/categories/1/doodles/2" for ::1 at 2020-02-12 09:28:10 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1443)
+
+
+Started GET "/categories/2/doodles/2" for ::1 at 2020-02-12 09:28:18 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"2", "id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 404 Not Found in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1349)
+
+
+Started GET "/categories/2/doodles/" for ::1 at 2020-02-12 09:28:25 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1329)
+
+
+Started GET "/categories/1/doodles/" for ::1 at 2020-02-12 09:28:31 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1788)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-12 09:28:34 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1788)
+
+
+Started GET "/categories/1/doodles/" for ::1 at 2020-02-12 09:30:43 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1790)
+
+
+Started GET "/categories/2/doodles/" for ::1 at 2020-02-12 09:31:20 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"category_id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1331)
+
+
+Started GET "/categories/2" for ::1 at 2020-02-12 09:31:26 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 702)
+
+
+Started POST "/categories/2/doodles" for ::1 at 2020-02-12 09:33:18 -0500
+Processing by DoodlesController#create as */*
+  Parameters: {"title"=>"ball", "path"=>"https://cdn.pixabay.com/photo/2013/07/13/10/51/football-157930_1280.png", "created_by"=>"sinara", "category_id"=>"2", "doodle"=>{"title"=>"ball", "path"=>"https://cdn.pixabay.com/photo/2013/07/13/10/51/football-157930_1280.png", "created_by"=>"sinara"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+[31mUnpermitted parameters: :category_id, :doodle[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+  [1m[36mDoodle Create (0.7ms)[0m  [1m[32mINSERT INTO "doodles" ("title", "path", "created_by", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "ball"], ["path", "https://cdn.pixabay.com/photo/2013/07/13/10/51/football-157930_1280.png"], ["created_by", "sinara"], ["category_id", 2], ["created_at", "2020-02-12 14:33:18.929042"], ["updated_at", "2020-02-12 14:33:18.929042"]]
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3360)
+
+
+Started POST "/categories/2/doodles" for ::1 at 2020-02-12 09:34:04 -0500
+Processing by DoodlesController#create as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "category_id"=>"2", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+[31mUnpermitted parameters: :category_id, :doodle[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+  [1m[36mDoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "doodles" ("title", "path", "created_by", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "pencil"], ["path", "https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png"], ["created_by", "sinara"], ["category_id", 2], ["created_at", "2020-02-12 14:34:04.947812"], ["updated_at", "2020-02-12 14:34:04.947812"]]
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3123)
+
+
+Started POST "/categories/2" for ::1 at 2020-02-12 09:34:18 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/categories/2"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/2" for ::1 at 2020-02-12 09:34:28 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "id"=>"2", "category"=>{}}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 674)
+
+
+Started GET "/categories/2/doodles" for ::1 at 2020-02-12 09:34:40 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "category_id"=>"2", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1647)
+
+
+Started GET "/categories/2/doodles/2" for ::1 at 2020-02-12 09:35:05 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "category_id"=>"2", "id"=>"2", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1359)
+
+
+Started GET "/categories/2/doodles/5" for ::1 at 2020-02-12 09:35:09 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "category_id"=>"2", "id"=>"5", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara"}}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 2], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1455)
+
+
+Started PUT "/categories/2/doodles/5" for ::1 at 2020-02-12 09:35:51 -0500
+Processing by DoodlesController#update as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor", "category_id"=>"2", "id"=>"5", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor"}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 2], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+[31mUnpermitted parameters: :category_id, :id, :doodle[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/doodles_controller.rb:24:in `update'
+  [1m[36mDoodle Update (1.7ms)[0m  [1m[33mUPDATE "doodles" SET "created_by" = ?, "updated_at" = ? WHERE "doodles"."id" = ?[0m  [["created_by", "igor"], ["updated_at", "2020-02-12 14:35:51.640423"], ["id", 5]]
+  ↳ app/controllers/doodles_controller.rb:24:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/doodles_controller.rb:24:in `update'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 3583)
+
+
+Started GET "/categories/2/doodles/5" for ::1 at 2020-02-12 09:35:59 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor", "category_id"=>"2", "id"=>"5", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 2], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1456)
+
+
+Started DELETE "/categories/2/doodles/5" for ::1 at 2020-02-12 09:36:09 -0500
+Processing by DoodlesController#destroy as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor", "category_id"=>"2", "id"=>"5", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor"}}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 2], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/doodles_controller.rb:30:in `destroy'
+  [1m[36mDoodle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "doodles" WHERE "doodles"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/doodles_controller.rb:30:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/doodles_controller.rb:30:in `destroy'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 2978)
+
+
+Started GET "/categories/2/doodles/5" for ::1 at 2020-02-12 09:36:16 -0500
+Processing by DoodlesController#show as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor", "category_id"=>"2", "id"=>"5", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 2], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:45:in `set_category_doodle'
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1359)
+
+
+Started GET "/categories/2/doodles" for ::1 at 2020-02-12 09:36:25 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor", "category_id"=>"2", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"igor"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.8ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 1494)
+
+
+Started POST "/categories/2/doodles" for ::1 at 2020-02-12 09:36:37 -0500
+Processing by DoodlesController#create as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "category_id"=>"2", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara"}}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+[31mUnpermitted parameters: :category_id, :doodle[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+  [1m[36mDoodle Create (0.5ms)[0m  [1m[32mINSERT INTO "doodles" ("title", "path", "created_by", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "pencil"], ["path", "https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png"], ["created_by", "sinara"], ["category_id", 2], ["created_at", "2020-02-12 14:36:37.856820"], ["updated_at", "2020-02-12 14:36:37.856820"]]
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/doodles_controller.rb:17:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3120)
+
+
+Started POST "/categories/2" for ::1 at 2020-02-12 09:36:42 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/categories/2"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/2" for ::1 at 2020-02-12 09:36:55 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "id"=>"2", "category"=>{}}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 674)
+
+
+Started GET "/categories/2/doodles" for ::1 at 2020-02-12 09:37:00 -0500
+Processing by DoodlesController#index as */*
+  Parameters: {"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara", "category_id"=>"2", "doodle"=>{"title"=>"pencil", "path"=>"https://cdn.pixabay.com/photo/2012/04/18/14/50/pencil-37254_1280.png", "created_by"=>"sinara"}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:41:in `set_category'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1647)
+
+

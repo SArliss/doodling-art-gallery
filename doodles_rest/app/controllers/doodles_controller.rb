@@ -9,7 +9,7 @@ class DoodlesController < ApplicationController
 
   # GET /categories/:category_id/doodles/:id
   def show
-    json_response(@category)
+    json_response(@doodle)
   end
 
   # POST /categories/:category_id/doodles
