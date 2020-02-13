@@ -6704,3 +6704,210 @@ Processing by DoodlesController#show as */*
 Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 2438)
 
 
+Started GET "/" for ::1 at 2020-02-13 17:55:53 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sinaraarliss/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sinaraarliss/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 296)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 1551)
+
+
+Started GET "/doodles" for ::1 at 2020-02-13 17:57:38 -0500
+Processing by DoodlesController#public_doodles as HTML
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 651)
+
+
+Started GET "/doodles" for ::1 at 2020-02-13 18:01:10 -0500
+Processing by DoodlesController#public_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 95)
+
+
+Started GET "/doodles" for ::1 at 2020-02-13 18:01:11 -0500
+Processing by DoodlesController#public_doodles as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 95)
+
+
+Started GET "/categories" for ::1 at 2020-02-13 18:01:20 -0500
+Processing by CategoriesController#index as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 126)
+
+
+Started GET "/doodles" for ::1 at 2020-02-13 18:01:59 -0500
+Processing by DoodlesController#public_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 95)
+
+
+Started GET "/categories" for ::1 at 2020-02-13 18:03:04 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 417)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-13 18:03:09 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 95)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-13 18:03:12 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/categories" for ::1 at 2020-02-13 18:03:59 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 24ms (Views: 12.1ms | ActiveRecord: 2.4ms | Allocations: 5233)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-13 18:04:25 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:42:in `set_category'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1079)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-13 18:04:29 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 361)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-13 18:05:07 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 4247)
+
+
+  
+NoMethodError (undefined method `doodles' for nil:NilClass):
+  
+app/controllers/doodles_controller.rb:8:in `index'
+Started GET "/categories/1/doodles/1" for ::1 at 2020-02-13 18:05:34 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category'
+  [1m[36mDoodle Load (0.5ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:52:in `set_category_doodle'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms | Allocations: 8236)
+
+
+  
+NoMethodError (undefined method `doodles' for nil:NilClass):
+  
+app/controllers/doodles_controller.rb:55:in `set_category_doodle'
+Started GET "/doodles" for ::1 at 2020-02-13 18:05:47 -0500
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1825)
+
+
+Started GET "/categories" for ::1 at 2020-02-13 18:05:59 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1614)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-13 18:06:05 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:42:in `set_category'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 667)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-13 18:06:15 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1086)
+
+
+  
+NoMethodError (undefined method `doodles' for nil:NilClass):
+  
+app/controllers/doodles_controller.rb:8:in `index'
+Started GET "/categories" for ::1 at 2020-02-13 18:09:30 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 1549)
+
+
+Started GET "/doodles" for ::1 at 2020-02-13 18:09:34 -0500
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1790)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-13 18:31:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:42:in `set_category'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 681)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-13 18:31:59 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:47:in `set_category'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1086)
+
+
+  
+NoMethodError (undefined method `doodles' for nil:NilClass):
+  
+app/controllers/doodles_controller.rb:8:in `index'
+Started GET "/doodles" for ::1 at 2020-02-13 18:32:23 -0500
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.5ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 1810)
+
+
+Started GET "/doodles" for ::1 at 2020-02-13 18:52:48 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.8ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.8ms | Allocations: 5862)
+
+
+Started GET "/categories" for ::1 at 2020-02-13 18:52:53 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 3991)
+
+
+Started GET "/categories/1" for ::1 at 2020-02-13 18:52:58 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:42:in `set_category'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 779)
+
+
+Started GET "/categories/1/doodles" for ::1 at 2020-02-13 18:53:01 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 308)
+
+

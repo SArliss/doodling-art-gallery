@@ -1,6 +1,7 @@
 class DoodlesController < ApplicationController
   before_action :set_category, only: [:index, :show, :create, :destroy]
   before_action :set_category_doodle, only: [:show, :update, :destroy]
+  skip_before_action :authorize_request, only: [:public_doodles]
 
   # GET /categories/:category_id/doodles
   def index
