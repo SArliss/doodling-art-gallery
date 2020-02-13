@@ -4,7 +4,6 @@ class User < ApplicationRecord
 
   # Model associations
   has_many :doodles, foreign_key: :created_by
-  has_many :categories, through: :doodles
   # Validations
   validates_presence_of :name, :email, :password_digest
 end

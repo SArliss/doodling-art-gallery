@@ -4,5 +4,5 @@ class Doodle < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates_presence_of :title, :path, :created_by
+  validates_presence_of :title, :path
 end

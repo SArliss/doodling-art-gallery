@@ -16,7 +16,7 @@ class DoodlesController < ApplicationController
 
   # POST /categories/:category_id/doodles
   def create
-    @category.doodles.create!(doodle_params)
+    @category.current_user.doodles.create!(doodle_params)
     # json_response(@category, :created)
     json_response(status: "SUCCESS", message: 'doodle created successfully.')
   end
@@ -44,6 +44,6 @@ class DoodlesController < ApplicationController
   end
 
   def set_category_doodle
-    @doodle = @category.doodles.find_by!(id: params[:id]) if @category
+    @doodle = @category.current_user.doodles.find_by!(id: params[:id]) if @category
   end
 end
