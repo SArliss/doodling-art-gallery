@@ -1,10 +1,15 @@
 class DoodlesController < ApplicationController
-  before_action :set_category
+  before_action :set_category, only: [:index, :show, :create, :destroy]
   before_action :set_category_doodle, only: [:show, :update, :destroy]
 
   # GET /categories/:category_id/doodles
   def index
     @doodles = current_user.doodles
+    json_response(@doodles)
+  end
+
+  def public_doodles
+    @doodles = Doodle.all
     json_response(@doodles)
   end
 
