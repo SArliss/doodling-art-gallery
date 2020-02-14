@@ -1,7 +1,7 @@
 class DoodlesController < ApplicationController
-  before_action :set_category, only: [:index, :show, :create, :destroy]
+  before_action :set_category, only: [:index, :show, :create, :destroy, :public_doodles_by_category]
   before_action :set_category_doodle, only: [:show, :update, :destroy]
-  skip_before_action :authorize_request, only: [:public_doodles]
+  skip_before_action :authorize_request, only: [:public_doodles, :public_doodles_by_category]
 
   # GET /categories/:category_id/doodles
   def index
@@ -9,9 +9,15 @@ class DoodlesController < ApplicationController
     json_response(@doodles)
   end
 
+  # Public doodles route GET /doodles
   def public_doodles
     @doodles = Doodle.all
     json_response(@doodles)
+  end
+
+  # Public doodles GET doodles/:category_id
+  def public_doodles_by_category
+    json_response(@category.doodles)
   end
 
   # GET /categories/:category_id/doodles/:id
