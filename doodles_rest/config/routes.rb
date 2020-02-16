@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   post 'register', to: 'users#create'
   get 'doodles', to: 'doodles#public_doodles'
   get 'doodles/:category_id', to: 'doodles#public_doodles_by_category'
+  get 'user/doodles', to: 'doodles#private_doodles'
+
 end
