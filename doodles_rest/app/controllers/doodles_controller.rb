@@ -20,6 +20,12 @@ class DoodlesController < ApplicationController
     json_response(@category.doodles)
   end
 
+  # Private doodles route GET categories/doodles
+  def private_doodles
+    @doodles = current_user.doodles
+    json_response(@doodles)
+  end
+
   # GET /categories/:category_id/doodles/:id
   def show
     @doodles = current_user.doodles
