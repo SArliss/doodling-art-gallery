@@ -19247,3 +19247,41 @@ Processing by DoodlesController#create as */*
 Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 4.6ms | Allocations: 6355)
 
 
+Started GET "/categories/doodles" for ::1 at 2020-02-16 17:22:59 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as */*
+  Parameters: {"title"=>"sinaramartins@gmail.com", "path"=>"aranis", "id"=>"doodles", "category"=>{}}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:42:in `set_category'
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1201)
+
+
+Started GET "/categories/doodles" for ::1 at 2020-02-16 17:23:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as */*
+  Parameters: {"title"=>"sinaramartins@gmail.com", "path"=>"aranis", "id"=>"doodles", "category"=>{}}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:42:in `set_category'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 852)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-16 17:23:37 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#private_doodles as */*
+  Parameters: {"title"=>"sinaramartins@gmail.com", "path"=>"aranis", "doodle"=>{"title"=>"sinaramartins@gmail.com", "path"=>"aranis"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.7ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 42ms (Views: 11.8ms | ActiveRecord: 3.9ms | Allocations: 11093)
+
+
+Started GET "/doodles" for ::1 at 2020-02-16 17:24:10 -0500
+Processing by DoodlesController#public_doodles as */*
+  Parameters: {"title"=>"sinaramartins@gmail.com", "path"=>"aranis", "doodle"=>{"title"=>"sinaramartins@gmail.com", "path"=>"aranis"}}
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1763)
+
+
