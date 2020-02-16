@@ -1,6 +1,6 @@
 class Doodle < ApplicationRecord
   # model association
-  belongs_to :category
+  belongs_to :category, dependent: :destroy
   belongs_to :user, :foreign_key => :category_id
 
   # validations
