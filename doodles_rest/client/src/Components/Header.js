@@ -6,22 +6,27 @@ function Header(props) {
     <header>
 
       <div className="title">
-      <Link to="/">
-        <h1>Doodling Art Gallery</h1>
-      </Link>
+        <Link to="/">
+          <h1>Doodling Art Gallery</h1>
+        </Link>
       </div>
 
       <nav>
-        {props.currentUser &&
+        {props.currentUser ?
+
           <ul>
             <Link to="/"><li>Home</li></Link>
-            <Link to="/user/doodles"><li>My Doodles</li></Link>
             <Link to="/public/doodles"><li>Public Doodles</li></Link>
+            <Link to="/user/doodles"><li>My Doodles</li></Link>
             <Link to="/login" onClick={props.handleLogout}><li>Logout</li></Link>
           </ul >
+          :
+          <ul>
+            <Link to="/public/doodles"><li>Public Doodles</li></Link>
+            <Link to="/"><li>Home</li></Link>
+          </ul>
         }
       </nav>
-
     </header>
   )
 }
