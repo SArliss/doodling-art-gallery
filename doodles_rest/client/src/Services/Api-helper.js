@@ -8,21 +8,30 @@ const api = axios.create({
 
 // LOGIN
 export const loginUser = async (loginData) => {
-  const resp = await api.post('/auth/login', loginData);
-  console.log(resp);
-  api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
-  localStorage.setItem('authToken', resp.data.auth_token);
-  localStorage.setItem('name', resp.data.user.name);
-  localStorage.setItem('email', resp.data.user.email);
-  return resp.data.user;
+  try {
+    const resp = await api.post('/auth/login', loginData);
+    console.log(resp);
+    api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
+    localStorage.setItem('authToken', resp.data.auth_token);
+    localStorage.setItem('name', resp.data.user.name);
+    localStorage.setItem('email', resp.data.user.email);
+    return resp.data.user;
+  } catch (e) {
+    console.log(e.response);
+    if (e.response && e.response.status === 401) {
+      return { errorMessage: `Email/password is incorrect, or user is already loggedin!` };
+    }
+  }
 }
 
 // REGISTER
 export const registerUser = async (registerData) => {
   try {
     const resp = await api.post('/register', registerData);
+    console.log(resp);
     api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
     localStorage.setItem('authToken', resp.data.auth_token);
+    localStorage.setItem('id', resp.data.id);
     localStorage.setItem('name', resp.data.user.name);
     localStorage.setItem('email', resp.data.user.email);
     return resp.data.user;
