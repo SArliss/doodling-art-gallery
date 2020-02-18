@@ -3,26 +3,26 @@ import { Link } from 'react-router-dom';
 
 function Header(props) {
   return (
-    <div>
+    <header>
 
-      <header>
+      <div className="title">
       <Link to="/">
         <h1>Doodling Art Gallery</h1>
       </Link>
-      </header>
+      </div>
 
-      <div className="menu">
+      <nav>
         {props.currentUser &&
           <ul>
             <Link to="/"><li>Home</li></Link>
-            <Link to="/explore"><li>My Doodles</li></Link>
-            <Link to="/myprofile"><li>Public Doodles</li></Link>
+            <Link to="/my-doodles"><li>My Doodles</li></Link>
+            <Link to="/public-doodles"><li>Public Doodles</li></Link>
             <Link to="/login" onClick={props.handleLogout}><li>Logout</li></Link>
           </ul >
         }
-      </div>
+      </nav>
 
-    </div>
+    </header>
   )
 }
 
