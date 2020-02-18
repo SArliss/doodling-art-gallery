@@ -21168,3 +21168,26 @@ Processing by AuthenticationController#authenticate as HTML
 Completed 200 OK in 413ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 1883)
 
 
+Started GET "/doodles" for ::1 at 2020-02-18 16:35:05 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.9ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.9ms | Allocations: 1904)
+
+
+Started POST "/auth/login" for ::1 at 2020-02-18 16:35:16 -0500
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"sinaramartins@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sinaramartins@gmail.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication[0m
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sinaramartins@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sinaramartins@gmail.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+[31mUnpermitted parameter: :authentication[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sinaramartins@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `authenticate'
+Completed 200 OK in 418ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 1883)
+
+
