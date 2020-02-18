@@ -15,8 +15,8 @@ function Header(props) {
         {props.currentUser &&
           <ul>
             <Link to="/"><li>Home</li></Link>
-            <Link to="/my-doodles"><li>My Doodles</li></Link>
-            <Link to="/public-doodles"><li>Public Doodles</li></Link>
+            <Link to="/user/doodles"><li>My Doodles</li></Link>
+            <Link to="/public/doodles"><li>Public Doodles</li></Link>
             <Link to="/login" onClick={props.handleLogout}><li>Logout</li></Link>
           </ul >
         }

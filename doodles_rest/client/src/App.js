@@ -6,11 +6,12 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import { registerUser, loginUser, verifyUser } from './Services/Api-helper';
 import RegisterForm from './Components/RegisterForm';
 import LoginForm from './Components/LoginForm';
-// import TodoContainer from './Components/TodoContainer';
 
 import DrawArea from './Components/DrawArea.js';
 import Footer from './Components/Footer.js';
 import Header from './Components/Header.js';
+import PersonalDoodles from './Components/PersonalDoodles.js';
+import PublicDoodles from './Components/PublicDoodles.js';
 
 
 class App extends React.Component {
@@ -76,9 +77,9 @@ class App extends React.Component {
       <div className="App">
 
         <Header
-         loggedIn={this.state.currentUser}
-         handleLogout={this.handleLogout}
-         currentUser={this.state.currentUser}
+          loggedIn={this.state.currentUser}
+          handleLogout={this.handleLogout}
+          currentUser={this.state.currentUser}
         />
 
         {this.state.currentUser ?
@@ -112,8 +113,11 @@ class App extends React.Component {
           />
         )} />
         <Route path="/user/doodles" render={() => (
-          // <TodoContainer /> 
-          <div></div>
+          <PersonalDoodles />
+        )} />
+
+        <Route path="/public/doodles" render={() => (
+          <PublicDoodles />
         )} />
 
         {/* <DrawArea /> */}
