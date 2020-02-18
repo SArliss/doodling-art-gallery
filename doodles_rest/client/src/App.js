@@ -82,15 +82,14 @@ class App extends React.Component {
         />
 
         {this.state.currentUser ?
-          <div>
-            <h1>Hello, {this.state.currentUser.name}</h1>
-            <button onClick={this.handleLogout}>Logout!</button>
+          <div className="greeting">
+            <h1>Hello, {this.state.currentUser.name}. Let's draw!</h1>
           </div>
           :
-          <nav>
+          <div className="register-login-buttons">
             <Link to="/register"><button>Register</button></Link>
             <Link to="/login"><button>Login</button></Link>
-          </nav>
+          </div>
         }
 
         <Route exact path="/" render={() => (
