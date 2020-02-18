@@ -13,6 +13,7 @@ export const loginUser = async (loginData) => {
     console.log(resp);
     api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
     localStorage.setItem('authToken', resp.data.auth_token);
+    localStorage.setItem('id', resp.data.user.id);
     localStorage.setItem('name', resp.data.user.name);
     localStorage.setItem('email', resp.data.user.email);
     return resp.data.user;
@@ -31,7 +32,7 @@ export const registerUser = async (registerData) => {
     console.log(resp);
     api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
     localStorage.setItem('authToken', resp.data.auth_token);
-    localStorage.setItem('id', resp.data.id);
+    localStorage.setItem('id', resp.data.user.id);
     localStorage.setItem('name', resp.data.user.name);
     localStorage.setItem('email', resp.data.user.email);
     return resp.data.user;
@@ -51,22 +52,44 @@ export const verifyUser = () => {
   }
 }
 
-// TODOS
-// GET ALL TODOS
-// export const indexTodos = async () => {
-//   const resp = await api.get('/todos');
-//   return resp.data;
-// }
+// GET ALL CATEGORIES
+export const getAllCategories = async () => {
+  const resp = await api.get(`/categories`);
+  return resp.data;
+}
 
-// //POST THE TODO
-// export const postTodo = async (postData) => {
-//   const resp = await api.post('/todos', postData);
-//   return resp.data;
-// }
+// GET CATEGORIES BY ID
+export const getOneCategories = async (categoryId) => {
+  const resp = await api.get(`/categories/${categoryId}`);
+  return resp.data;
+}
 
-// // UPDATE TODO
-// export const putTodo = async (id, postData) => {
-//   const resp = await api.put(`/todos/${id}`, postData);
-//   const todo = {id: id, title: resp.data.data}
-//   return todo;
-// }
+// GET ALL PUBLIC DOODLES
+export const indexDoodles = async () => {
+  const resp = await api.get(`/doodles`);
+  return resp.data;
+}
+
+// GET ALL PUBLIC DOODLES BY CAT
+export const indexDoodlesCat = async (categoryId) => {
+  const resp = await api.get(`/doodles/${categoryId}`);
+  return resp.data;
+}
+
+// GET ALL USER DOODLES 
+export const userAllDoodles = async () => {
+  const resp = await api.get(`/user/doodles`);
+  return resp.data;
+}
+
+// GET ALL USER DOODLES BY CAT
+export const userDoodlesCat = async (categoryId) => {
+  const resp = await api.get(`/categories/${categoryId}/recipes`);
+  return resp.data;
+}
+
+// GET ONE USER DOODLES BY CAT
+export const userOneDoodles = async (categoryId, doodleId) => {
+  const resp = await api.get(`/categories/${categoryId}/recipes/${doodleId}`);
+  return resp.data;
+}
