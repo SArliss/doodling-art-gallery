@@ -59,37 +59,37 @@ export const getAllCategories = async () => {
 }
 
 // GET CATEGORIES BY ID
-export const getOneCategories = async (categoryId) => {
+export const getOneCategory = async (categoryId) => {
   const resp = await api.get(`/categories/${categoryId}`);
   return resp.data;
 }
 
 // GET ALL PUBLIC DOODLES
-export const indexDoodles = async () => {
+export const getPublicDoodles = async () => {
   const resp = await api.get(`/doodles`);
   return resp.data;
 }
 
 // GET ALL PUBLIC DOODLES BY CAT
-export const indexDoodlesCat = async (categoryId) => {
+export const getDoodleByCat = async (categoryId) => {
   const resp = await api.get(`/doodles/${categoryId}`);
   return resp.data;
 }
 
 // GET ALL USER DOODLES 
-export const userAllDoodles = async () => {
+export const getAllUserDoodles = async () => {
   const resp = await api.get(`/user/doodles`);
   return resp.data;
 }
 
 // GET ALL USER DOODLES BY CAT
-export const userDoodlesCat = async (categoryId) => {
+export const getUserDoodlesByCat = async (categoryId) => {
   const resp = await api.get(`/categories/${categoryId}/recipes`);
   return resp.data;
 }
 
 // GET ONE USER DOODLES BY CAT
-export const userOneDoodles = async (categoryId, doodleId) => {
+export const getOneUserDoodle = async (categoryId, doodleId) => {
   const resp = await api.get(`/categories/${categoryId}/recipes/${doodleId}`);
   return resp.data;
 }

@@ -7,7 +7,6 @@ import { registerUser, loginUser, verifyUser } from './Services/Api-helper';
 import RegisterForm from './Components/RegisterForm';
 import LoginForm from './Components/LoginForm';
 
-import DrawArea from './Components/DrawArea.js';
 import Footer from './Components/Footer.js';
 import Header from './Components/Header.js';
 import PersonalDoodles from './Components/PersonalDoodles.js';
@@ -84,7 +83,7 @@ class App extends React.Component {
 
         {this.state.currentUser ?
           <div className="greeting">
-            <h1>Hello, {this.state.currentUser.name}. Let's draw!</h1>
+            <h1>Hello, {this.state.currentUser.name}!</h1>
           </div>
           :
           <div className="register-login-buttons">
