@@ -27,13 +27,13 @@ export default class PersonalDoodles extends React.Component {
             <div key={doodle.id} >
 
               <div className="doodle-info">
-              <p>Title: {doodle.title}</p>
-                <p>User: {doodle.created_by}</p>
+                <p>Title: {doodle.title}</p>
+                <p>User ID: {doodle.created_by}</p>
               </div>
               
               <div className="drawArea">
-                <svg width="450px" height="450px" className="drawing">
-                  <path d={doodle.path} />
+                <svg width="450px" height="450px">
+                  <path d={doodle.path} stroke="black" stroke-width="4" fill="none"/>
                 </svg>
               </div>
 

@@ -20,17 +20,24 @@ export default class PublicDoodles extends React.Component {
   render() {
     return (
       <div>
-        <div className="doodles-wrapper">
-          {this.state.doodles.map(doodle =>
-            <div key={doodle.id} className="doodle-info">
+      <div className="doodles-wrapper">
+        {this.state.doodles.map(doodle =>
+          <div key={doodle.id} >
+
+            <div className="doodle-info">
               <p>Title: {doodle.title}</p>
-              <p>User: {doodle.created_by}</p>
+              <p>User ID: {doodle.created_by}</p>
+            </div>
+            
+            <div className="drawArea">
               <svg width="450px" height="450px">
-                <path d={doodle.path} />
+                <path d={doodle.path} stroke="black" stroke-width="4" fill="none"/>
               </svg>
             </div>
-          )}
-        </div>
+
+          </div>
+        )}
+      </div>
     </div>
     )
   }
