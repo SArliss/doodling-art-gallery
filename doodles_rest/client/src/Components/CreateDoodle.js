@@ -7,8 +7,6 @@ class CreateDoodle extends React.Component {
     super(props);
 
     this.state = {
-      lines: "",
-      doodles: []
     }
   }
 
@@ -20,10 +18,6 @@ class CreateDoodle extends React.Component {
 
   createDoodle = async (category, doodleData) => {
     const newDoodle = await createDoodleCall(category, doodleData)
-    this.setState({
-      doodles: [...this.state.doodles, newDoodle]
-    })
-    // this.props.history.push(`/`)
   }
 
   handleDropdown = (e) => {
@@ -41,6 +35,7 @@ class CreateDoodle extends React.Component {
         `${p.get('x')} ${p.get('y')}`)).join(" L ")))
 
     console.log(pathData)
+    
     return (
       <form
         onSubmit={e => {
