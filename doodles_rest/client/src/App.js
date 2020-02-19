@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 // custom components 
 import { registerUser, loginUser, verifyUser } from './Services/Api-helper';
@@ -9,8 +9,9 @@ import LoginForm from './Components/LoginForm';
 
 import Footer from './Components/Footer.js';
 import Header from './Components/Header.js';
-import PersonalDoodles from './Components/PersonalDoodles.js';
 import PublicDoodles from './Components/PublicDoodles.js';
+import PersonalDoodles from './Components/PersonalDoodles.js';
+import DrawArea from './Components/DrawArea';
 
 
 class App extends React.Component {
@@ -20,7 +21,7 @@ class App extends React.Component {
       name: "",
       email: "",
       password: "",
-      currentUser: false,
+      currentUser: null,
       errorText: ""
     }
   }
@@ -30,7 +31,7 @@ class App extends React.Component {
     const currentUser = await registerUser(registerData);
     if (!currentUser.errorMessage) {
       this.setState({ currentUser });
-      this.props.history.push('/user/doodles');
+      this.props.history.push('/');
     } else {
       this.setState({ errorText: currentUser.errorMessage })
     }
@@ -41,7 +42,7 @@ class App extends React.Component {
     const currentUser = await loginUser(loginData);
     if (!currentUser.errorMessage) {
       this.setState({ currentUser });
-      this.props.history.push("/user/doodles");
+      this.props.history.push("/");
     } else {
       this.setState({ errorText: currentUser.errorMessage })
     }
@@ -49,7 +50,7 @@ class App extends React.Component {
 
   handleLogout = () => {
     this.setState({
-      currentUser: false
+      currentUser: null
     })
     localStorage.removeItem('authToken');
     localStorage.removeItem('name');
@@ -71,6 +72,7 @@ class App extends React.Component {
   }
 
 
+
   render() {
     return (
       <div className="App">
@@ -81,19 +83,7 @@ class App extends React.Component {
           currentUser={this.state.currentUser}
         />
 
-        {this.state.currentUser ?
-          <div className="greeting">
-            <h1>Hello, {this.state.currentUser.name}!</h1>
-          </div>
-          :
-          <div className="register-login-buttons">
-            <Link to="/register"><button>Register</button></Link>
-            <Link to="/login"><button>Login</button></Link>
-          </div>
-        }
-
         <Route exact path="/" render={() => (
-          // <TodoContainer /> 
           <div></div>
         )} />
 
@@ -104,6 +94,7 @@ class App extends React.Component {
             currentUser={this.state.currentUser}
           />
         )} />
+
         <Route path="/register" render={() => (
           <RegisterForm
             handleRegister={this.handleRegister}
@@ -111,15 +102,19 @@ class App extends React.Component {
             currentUser={this.state.currentUser}
           />
         )} />
-        <Route path="/user/doodles" render={() => (
-          <PersonalDoodles />
-        )} />
 
-        <Route path="/public/doodles" render={() => (
+        <Route exact path="/public" render={() => (
           <PublicDoodles />
         )} />
 
-        {/* <DrawArea /> */}
+        <Route exact path="/user" render={() => (
+          <PersonalDoodles />
+          // <h1>Hello</h1>
+        )} />
+
+        <Route path="/drawing-page" render={() => (
+          <DrawArea />
+        )} />
 
         <Footer />
 

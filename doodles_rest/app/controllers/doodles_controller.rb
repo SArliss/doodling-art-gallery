@@ -1,4 +1,5 @@
 class DoodlesController < ApplicationController
+  #before_action :set_user, only: [:create, :update, :destroy, :private_doodles]
   skip_before_action :authorize_request, only: [:public_doodles, :public_doodles_by_category]
 
   # GET /categories/:category_id/doodles
@@ -67,5 +68,9 @@ class DoodlesController < ApplicationController
   def doodle_params
     params.permit(:title, :path, :created_by)
   end
+
+  #def set_user
+  #  @user = User.find_by!(params[:id])
+  #end
 
 end

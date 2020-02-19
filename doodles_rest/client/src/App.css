@@ -59,8 +59,9 @@ footer {
   background-color: rgb(255, 255, 255);
   padding: 5px 0 30px 0;
   margin: 0 auto;
-  border-radius: 5px;
-  width: 25em;
+  border-radius: 20px;
+  width: 350px;
+  height: 350px;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -75,18 +76,29 @@ footer {
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0 auto;
+  padding: 1em;
   text-align: center;
   justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
 }
 
-.register-login-buttons button, .personal-doodle-buttons-wrapper button {
-  margin: 1em;
+.register-login-buttons button {
+  margin: 0.5em 0.1em;
+  width: 6em;
+}
+
+.personal-doodle-buttons-wrapper button {
+  text-align: center;
+  margin: 0.3em;
+  padding: 5px;
 }
 
 input[type=text], input[type=password]{
   width: 180px;
   padding: 5px;
-  background-color: rgba(244, 242, 242, 0.235);
+  background-color: rgb(255, 255, 255);
   margin: 10px;
   border: 1px solid rgb(160, 160, 160, 0.5); 
   border-radius: 10px;
@@ -113,7 +125,11 @@ button {
   font-weight: 500;
   cursor: pointer;
   text-decoration: none; 
-  margin: 5px 0 20px 0;
+  margin: 10px;
+}
+
+nav {
+  margin: -10px auto;
 }
 
 nav ul, nav a {
@@ -124,22 +140,14 @@ nav ul, nav a {
   align-content: center;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 10px;
+  margin: 0 10px 0 10px;
   list-style-type: none;
-}
-
-nav > a {
-  text-decoration: none;
-}
-
-nav > ul > a {
   text-decoration: none;
   font-size: large;
 }
 
 header {
   background-color: rgba(255, 255, 255, 0.755);
-  padding-top: 1em;
   margin: 0 auto;
 }
 
@@ -147,13 +155,15 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 0 auto;
-  text-align: 0 auto;
+  margin: 0 auto -2em auto;
+  padding: 0 2em;
+  text-align: center;
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.755);
-  font-size: small;
-  font-family: fantasy;
+  font-size: medium;
+  font-family: 'Sacramento', cursive;
+  color: rgb(53, 53, 53);
 }
 
 .doodles-wrapper {
@@ -175,4 +185,14 @@ header {
   border-radius: 20px;
   margin: 10px auto;
   text-align: center;
+}
+
+.doodle-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: 0 auto;
+  align-items: center;
+  justify-content: center;
 }

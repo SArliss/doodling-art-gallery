@@ -1,5 +1,6 @@
 import React from 'react';
 import Drawing from './Drawing.js';
+import CreateDoodle from './CreateDoodle'
 import Immutable from 'immutable';
 
 class DrawArea extends React.Component {
@@ -56,16 +57,26 @@ class DrawArea extends React.Component {
   }
 
   render() {
-    
+
     return (
+      <div>
+
         <div
           className="drawArea"
           ref="drawArea"
           onMouseDown={this.handleMouseDown}
           onMouseMove={this.handleMouseMove}
         >
-          <Drawing lines={this.state.lines}/>
+          <Drawing lines={this.state.lines} />
         </div>
+
+        <div
+          className="doodle-form"
+        >
+          <CreateDoodle lines={this.state.lines} />
+        </div>
+
+      </div>
     );
   }
 }

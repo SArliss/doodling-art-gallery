@@ -79,6 +79,7 @@ export const getDoodleByCat = async (categoryId) => {
 // GET ALL USER DOODLES 
 export const getAllUserDoodles = async () => {
   const resp = await api.get(`/user/doodles`);
+  console.log(resp.data)
   return resp.data;
 }
 
@@ -91,5 +92,11 @@ export const getUserDoodlesByCat = async (categoryId) => {
 // GET ONE USER DOODLES BY CAT
 export const getOneUserDoodle = async (categoryId, doodleId) => {
   const resp = await api.get(`/categories/${categoryId}/recipes/${doodleId}`);
+  return resp.data;
+}
+
+// CREATE A DOODLE
+export const createDoodleCall = async (categoryId, postData) => {
+  const resp = await api.post(`/categories/${categoryId}/doodles`, postData);
   return resp.data;
 }

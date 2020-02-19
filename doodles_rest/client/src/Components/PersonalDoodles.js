@@ -1,16 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import DrawArea from './DrawArea.js';
+import { getAllUserDoodles } from '../Services/Api-helper.js'
+// import { Link } from 'react-router-dom';
 
+export default class PersonalDoodles extends React.Component {
+  constructor(props) {
+    super(props)
 
-function PersonalDoodles() {
-  return (
-    <div className="personal-doodle-buttons-wrapper">
-      <Link to="drawing"><button>✎ Let's draw</button></Link>
-      <Link to="gallery"><button>🔍 My gallery</button></Link>
-    </div>
-  )
+    this.state = {
+      doodles: []
+    }
+  }
+
+  componentDidMount = async () => {
+    const doodles = await getAllUserDoodles()
+    console.log(doodles)
+    this.setState({
+      doodles
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="doodles-wrapper">
+          {this.state.doodles.map(doodle =>
+            <div key={doodle.id} >
+
+              <div className="doodle-info">
+              <p>Title: {doodle.title}</p>
+                <p>User: {doodle.created_by}</p>
+              </div>
+              
+              <div className="drawArea">
+                <svg width="450px" height="450px" className="drawing">
+                  <path d={doodle.path} />
+                </svg>
+              </div>
+
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
 }
-
-export default PersonalDoodles
-
