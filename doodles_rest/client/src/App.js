@@ -12,6 +12,8 @@ import Header from './Components/Header.js';
 import PublicDoodles from './Components/PublicDoodles.js';
 import PersonalDoodles from './Components/PersonalDoodles.js';
 import DrawArea from './Components/DrawArea';
+import UpdateDoodle from './Components/UpdateDoodle';
+import DoodleDetail from './Components/DoodleDetail';
 
 
 class App extends React.Component {
@@ -115,6 +117,9 @@ class App extends React.Component {
         <Route path="/drawing-page" render={() => (
           <DrawArea />
         )} />
+
+        <Route path="/doodles/detail/:category/:id" component={DoodleDetail} />
+        <Route path="/doodles/update/:category/:id" component={UpdateDoodle} />
 
         <Footer />
 
