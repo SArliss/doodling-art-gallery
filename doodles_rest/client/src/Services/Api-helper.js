@@ -10,7 +10,6 @@ const api = axios.create({
 export const loginUser = async (loginData) => {
   try {
     const resp = await api.post('/auth/login', loginData);
-    console.log(resp);
     api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
     localStorage.setItem('authToken', resp.data.auth_token);
     localStorage.setItem('id', resp.data.user.id);
@@ -18,7 +17,6 @@ export const loginUser = async (loginData) => {
     localStorage.setItem('email', resp.data.user.email);
     return resp.data.user;
   } catch (e) {
-    console.log(e.response);
     if (e.response && e.response.status === 401) {
       return { errorMessage: `Email/password is incorrect, or user is already loggedin!` };
     }
@@ -79,19 +77,18 @@ export const getDoodleByCat = async (categoryId) => {
 // GET ALL USER DOODLES 
 export const getAllUserDoodles = async () => {
   const resp = await api.get(`/user/doodles`);
-  console.log(resp.data)
   return resp.data;
 }
 
 // GET ALL USER DOODLES BY CAT
 export const getUserDoodlesByCat = async (categoryId) => {
-  const resp = await api.get(`/categories/${categoryId}/recipes`);
+  const resp = await api.get(`/categories/${categoryId}/doodles`);
   return resp.data;
 }
 
 // GET ONE USER DOODLES BY CAT
 export const getOneUserDoodle = async (categoryId, doodleId) => {
-  const resp = await api.get(`/categories/${categoryId}/recipes/${doodleId}`);
+  const resp = await api.get(`/categories/${categoryId}/doodles/${doodleId}`);
   return resp.data;
 }
 
@@ -100,3 +97,18 @@ export const createDoodleCall = async (categoryId, postData) => {
   const resp = await api.post(`/categories/${categoryId}/doodles`, postData);
   return resp.data;
 }
+
+export const updateDoodle = async (categoryId, doodleId, postData) => {
+  const resp = await api.put(
+    `/categories/${categoryId}/doodles/${doodleId}`,
+    postData
+  );
+  return resp;
+};
+
+export const deleteDoodleCall = async (categoryId, doodleId) => {
+  const resp = await api.delete(
+    `/categories/${categoryId}/doodles/${doodleId}`
+  );
+  return resp.data;
+};
