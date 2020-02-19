@@ -1,6 +1,6 @@
 import React from 'react';
 import { getAllUserDoodles } from '../Services/Api-helper.js'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class PersonalDoodles extends React.Component {
   constructor(props) {
@@ -25,6 +25,7 @@ export default class PersonalDoodles extends React.Component {
         <div className="doodles-wrapper">
           {this.state.doodles.map(doodle =>
             <div key={doodle.id} >
+              <Link to={`/doodles/detail/${doodle.category_id}/${doodle.id}`}>Details</Link>
 
               <div className="doodle-info">
                 <p>Title: {doodle.title}</p>
