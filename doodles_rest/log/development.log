@@ -25437,3 +25437,805 @@ Processing by DoodlesController#public_doodles as HTML
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1462)
 
 
+Started GET "/doodles" for ::1 at 2020-02-19 16:00:42 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1484)
+
+
+Started GET "/doodles" for ::1 at 2020-02-19 16:46:35 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (2.7ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 3.3ms | Allocations: 6527)
+
+
+Started GET "/doodles" for ::1 at 2020-02-19 16:46:39 -0500
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1478)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:46:50 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 37ms (Views: 5.6ms | ActiveRecord: 2.1ms | Allocations: 8517)
+
+
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:47:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:47:09 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 2233)
+
+
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:47:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/categories/undefined/doodles/undefined" for ::1 at 2020-02-19 16:47:16 -0500
+Processing by DoodlesController#destroy as HTML
+  Parameters: {"category_id"=>"undefined", "id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:59:in `destroy'
+Completed 404 Not Found in 15ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 3666)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:47:21 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 2161)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:48:06 -0500
+Processing by DoodlesController#private_doodles as HTML
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1430)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:48:20 -0500
+Processing by DoodlesController#private_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:48:25 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 2161)
+
+
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:48:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/categories/undefined/doodles/undefined" for ::1 at 2020-02-19 16:48:39 -0500
+Processing by DoodlesController#destroy as HTML
+  Parameters: {"category_id"=>"undefined", "id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:59:in `destroy'
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1188)
+
+
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:49:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/categories/undefined/doodles/undefined" for ::1 at 2020-02-19 16:49:05 -0500
+Processing by DoodlesController#destroy as HTML
+  Parameters: {"category_id"=>"undefined", "id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:59:in `destroy'
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1189)
+
+
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:49:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-19 16:49:55 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sinaraarliss/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sinaraarliss/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 182)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 851)
+
+
+Started GET "/categories" for ::1 at 2020-02-19 16:50:01 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 3266)
+
+
+Started GET "/categories/3" for ::1 at 2020-02-19 16:50:05 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:42:in `set_category'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 667)
+
+
+Started GET "/categories/3/1" for ::1 at 2020-02-19 16:50:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/3/doodles" for ::1 at 2020-02-19 16:50:19 -0500
+Processing by DoodlesController#index as HTML
+  Parameters: {"category_id"=>"3"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/categories/3/doodles/1" for ::1 at 2020-02-19 16:50:24 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"1"}
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started DELETE "/categories/undefined/doodles/undefined" for ::1 at 2020-02-19 16:50:38 -0500
+Processing by DoodlesController#destroy as HTML
+  Parameters: {"category_id"=>"undefined", "id"=>"undefined"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:59:in `destroy'
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1190)
+
+
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:51:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:51:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/3/recipes/1" for ::1 at 2020-02-19 16:51:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/categories/3/recipes/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/3/doodles/1" for ::1 at 2020-02-19 16:51:49 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.4ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 2104)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:52:09 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2161)
+
+
+Started GET "/categories/3/doodles/1" for ::1 at 2020-02-19 16:52:11 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 2075)
+
+
+Started DELETE "/categories/3/doodles/1" for ::1 at 2020-02-19 16:52:16 -0500
+Processing by DoodlesController#destroy as HTML
+  Parameters: {"category_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:59:in `destroy'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:61:in `destroy'
+  [1m[36mDoodle Destroy (3.5ms)[0m  [1m[31mDELETE FROM "doodles" WHERE "doodles"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/doodles_controller.rb:62:in `destroy'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 4.0ms | Allocations: 2420)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:52:18 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 2033)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:52:54 -0500
+Processing by DoodlesController#private_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:52:56 -0500
+Processing by DoodlesController#private_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:53:22 -0500
+Processing by DoodlesController#private_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:53:39 -0500
+Processing by DoodlesController#private_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:53:40 -0500
+Processing by DoodlesController#private_doodles as HTML
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:53:47 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 2018)
+
+
+Started GET "/categories/3/doodles/2" for ::1 at 2020-02-19 16:53:52 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.5ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 2076)
+
+
+Started GET "/categories/3/doodles/2" for ::1 at 2020-02-19 16:54:07 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 2075)
+
+
+Started GET "/categories/3/doodles/2" for ::1 at 2020-02-19 16:54:08 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 2075)
+
+
+Started GET "/categories/3/doodles/2" for ::1 at 2020-02-19 16:54:12 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 2076)
+
+
+Started POST "/categories/4/doodles" for ::1 at 2020-02-19 16:57:35 -0500
+Processing by DoodlesController#create as HTML
+  Parameters: {"title"=>"cloud", "path"=>"M 139.5 161.15625 L 138.5 161.15625 L 137.5 161.15625 L 136.5 161.15625 L 134.5 161.15625 L 132.5 161.15625 L 129.5 160.15625 L 128.5 160.15625 L 125.5 159.15625 L 122.5 158.15625 L 118.5 157.15625 L 114.5 156.15625 L 111.5 154.15625 L 108.5 152.15625 L 107.5 152.15625 L 102.5 149.15625 L 102.5 148.15625 L 100.5 146.15625 L 98.5 144.15625 L 97.5 142.15625 L 97.5 140.15625 L 96.5 138.15625 L 95.5 137.15625 L 95.5 133.15625 L 95.5 131.15625 L 95.5 128.15625 L 95.5 125.15625 L 97.5 121.15625 L 99.5 118.15625 L 102.5 114.15625 L 106.5 109.15625 L 110.5 104.15625 L 114.5 101.15625 L 120.5 97.15625 L 125.5 94.15625 L 132.5 90.15625 L 138.5 88.15625 L 144.5 87.15625 L 150.5 86.15625 L 155.5 86.15625 L 157.5 86.15625 L 162.5 86.15625 L 165.5 87.15625 L 167.5 89.15625 L 168.5 92.15625 L 169.5 96.15625 L 169.5 99.15625 L 170.5 104.15625 L 170.5 106.15625 L 170.5 109.15625 L 170.5 110.15625 L 170.5 112.15625 L 170.5 113.15625 L 170.5 113.15625 L 170.5 114.15625 L 170.5 112.15625 L 172.5 107.15625 L 176.5 101.15625 L 179.5 94.15625 L 184.5 85.15625 L 191.5 76.15625 L 194.5 72.15625 L 199.5 63.15625 L 206.5 57.15625 L 212.5 50.15625 L 217.5 45.15625 L 223.5 42.15625 L 225.5 41.15625 L 232.5 38.15625 L 233.5 38.15625 L 237.5 38.15625 L 240.5 38.15625 L 242.5 40.15625 L 244.5 43.15625 L 246.5 47.15625 L 247.5 52.15625 L 249.5 58.15625 L 251.5 63.15625 L 252.5 69.15625 L 253.5 75.15625 L 254.5 80.15625 L 254.5 86.15625 L 254.5 92.15625 L 254.5 97.15625 L 254.5 99.15625 L 254.5 103.15625 L 254.5 105.15625 L 254.5 107.15625 L 254.5 108.15625 L 253.5 109.15625 L 253.5 110.15625 L 252.5 110.15625 L 252.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 253.5 110.15625 L 256.5 110.15625 L 261.5 110.15625 L 267.5 111.15625 L 274.5 114.15625 L 282.5 117.15625 L 292.5 122.15625 L 300.5 128.15625 L 308.5 135.15625 L 311.5 139.15625 L 316.5 145.15625 L 321.5 152.15625 L 324.5 157.15625 L 326.5 162.15625 L 327.5 167.15625 L 327.5 169.15625 L 327.5 172.15625 L 327.5 175.15625 L 327.5 178.15625 L 327.5 180.15625 L 326.5 183.15625 L 324.5 185.15625 L 322.5 187.15625 L 319.5 189.15625 L 316.5 190.15625 L 313.5 193.15625 L 309.5 194.15625 L 307.5 195.15625 L 304.5 196.15625 L 303.5 197.15625 L 301.5 198.15625 L 300.5 199.15625 L 299.5 199.15625 L 299.5 199.15625 L 299.5 199.15625 L 301.5 200.15625 L 302.5 201.15625 L 304.5 205.15625 L 306.5 207.15625 L 307.5 211.15625 L 309.5 216.15625 L 311.5 222.15625 L 311.5 227.15625 L 312.5 233.15625 L 312.5 237.15625 L 312.5 241.15625 L 312.5 245.15625 L 310.5 249.15625 L 308.5 252.15625 L 306.5 254.15625 L 303.5 256.15625 L 300.5 259.15625 L 295.5 261.15625 L 291.5 263.15625 L 290.5 264.15625 L 286.5 265.15625 L 283.5 266.15625 L 280.5 266.15625 L 277.5 266.15625 L 275.5 266.15625 L 273.5 266.15625 L 271.5 266.15625 L 270.5 265.15625 L 269.5 264.15625 L 268.5 263.15625 L 268.5 262.15625 L 267.5 261.15625 L 267.5 260.15625 L 267.5 259.15625 L 267.5 259.15625 L 267.5 259.15625 L 268.5 259.15625 L 269.5 259.15625 L 270.5 260.15625 L 271.5 262.15625 L 271.5 263.15625 L 272.5 265.15625 L 272.5 267.15625 L 272.5 269.15625 L 272.5 272.15625 L 270.5 276.15625 L 268.5 279.15625 L 266.5 283.15625 L 262.5 286.15625 L 259.5 289.15625 L 256.5 292.15625 L 252.5 295.15625 L 250.5 296.15625 L 247.5 298.15625 L 245.5 300.15625 L 242.5 301.15625 L 239.5 302.15625 L 236.5 304.15625 L 233.5 304.15625 L 230.5 304.15625 L 227.5 304.15625 L 224.5 304.15625 L 220.5 304.15625 L 219.5 304.15625 L 216.5 303.15625 L 213.5 302.15625 L 212.5 301.15625 L 210.5 299.15625 L 209.5 298.15625 L 208.5 296.15625 L 207.5 294.15625 L 207.5 292.15625 L 207.5 290.15625 L 207.5 289.15625 L 207.5 287.15625 L 207.5 286.15625 L 208.5 285.15625 L 209.5 285.15625 L 210.5 284.15625 L 210.5 284.15625 L 211.5 284.15625 L 212.5 284.15625 L 212.5 284.15625 L 213.5 284.15625 L 213.5 284.15625 L 213.5 285.15625 L 213.5 286.15625 L 213.5 288.15625 L 213.5 290.15625 L 213.5 291.15625 L 212.5 293.15625 L 210.5 295.15625 L 209.5 297.15625 L 208.5 298.15625 L 206.5 300.15625 L 205.5 301.15625 L 202.5 302.15625 L 201.5 303.15625 L 198.5 303.15625 L 194.5 304.15625 L 189.5 304.15625 L 185.5 304.15625 L 179.5 304.15625 L 174.5 304.15625 L 169.5 303.15625 L 163.5 300.15625 L 158.5 298.15625 L 153.5 295.15625 L 148.5 292.15625 L 143.5 288.15625 L 138.5 283.15625 L 135.5 279.15625 L 130.5 274.15625 L 127.5 269.15625 L 124.5 264.15625 L 121.5 259.15625 L 121.5 257.15625 L 120.5 253.15625 L 118.5 247.15625 L 118.5 246.15625 L 118.5 241.15625 L 118.5 238.15625 L 118.5 234.15625 L 120.5 231.15625 L 121.5 229.15625 L 123.5 227.15625 L 125.5 225.15625 L 127.5 223.15625 L 128.5 222.15625 L 129.5 222.15625 L 131.5 221.15625 L 132.5 220.15625 L 132.5 220.15625 L 133.5 220.15625 L 133.5 220.15625 L 133.5 220.15625 L 134.5 220.15625 L 133.5 220.15625 L 131.5 220.15625 L 129.5 221.15625 L 127.5 221.15625 L 124.5 221.15625 L 121.5 222.15625 L 117.5 222.15625 L 113.5 222.15625 L 109.5 222.15625 L 105.5 222.15625 L 101.5 222.15625 L 99.5 222.15625 L 96.5 222.15625 L 93.5 222.15625 L 90.5 221.15625 L 88.5 220.15625 L 86.5 219.15625 L 85.5 219.15625 L 83.5 217.15625 L 82.5 216.15625 L 81.5 215.15625 L 80.5 213.15625 L 79.5 212.15625 L 79.5 210.15625 L 78.5 208.15625 L 78.5 205.15625 L 78.5 203.15625 L 78.5 201.15625 L 78.5 199.15625 L 78.5 196.15625 L 78.5 195.15625 L 78.5 193.15625 L 78.5 191.15625 L 79.5 190.15625 L 79.5 188.15625 L 80.5 187.15625 L 81.5 186.15625 L 81.5 185.15625 L 82.5 184.15625 L 83.5 183.15625 L 84.5 182.15625 L 86.5 181.15625 L 87.5 180.15625 L 89.5 179.15625 L 91.5 179.15625 L 92.5 178.15625 L 94.5 177.15625 L 96.5 176.15625 L 97.5 176.15625 L 99.5 175.15625 L 100.5 175.15625 L 102.5 174.15625 L 103.5 174.15625 L 104.5 174.15625 L 105.5 173.15625 L 106.5 173.15625 L 107.5 172.15625 L 108.5 172.15625 L 109.5 171.15625 L 110.5 171.15625 L 110.5 171.15625 L 111.5 171.15625 L 112.5 171.15625 L 112.5 170.15625 L 113.5 170.15625 L 114.5 170.15625 L 115.5 170.15625 L 115.5 170.15625 L 116.5 169.15625 L 117.5 169.15625 L 118.5 169.15625 L 119.5 168.15625 L 120.5 168.15625 L 120.5 168.15625 L 121.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 124.5 167.15625 L 124.5 167.15625 L 124.5 167.15625 L 125.5 166.15625 L 125.5 166.15625 L 126.5 166.15625 L 127.5 165.15625 L 128.5 165.15625 L 128.5 165.15625 L 129.5 165.15625 L 129.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 131.5 164.15625 L 131.5 164.15625 L 131.5 163.15625 L 131.5 163.15625", "category_id"=>"4", "doodle"=>{"title"=>"cloud", "path"=>"M 139.5 161.15625 L 138.5 161.15625 L 137.5 161.15625 L 136.5 161.15625 L 134.5 161.15625 L 132.5 161.15625 L 129.5 160.15625 L 128.5 160.15625 L 125.5 159.15625 L 122.5 158.15625 L 118.5 157.15625 L 114.5 156.15625 L 111.5 154.15625 L 108.5 152.15625 L 107.5 152.15625 L 102.5 149.15625 L 102.5 148.15625 L 100.5 146.15625 L 98.5 144.15625 L 97.5 142.15625 L 97.5 140.15625 L 96.5 138.15625 L 95.5 137.15625 L 95.5 133.15625 L 95.5 131.15625 L 95.5 128.15625 L 95.5 125.15625 L 97.5 121.15625 L 99.5 118.15625 L 102.5 114.15625 L 106.5 109.15625 L 110.5 104.15625 L 114.5 101.15625 L 120.5 97.15625 L 125.5 94.15625 L 132.5 90.15625 L 138.5 88.15625 L 144.5 87.15625 L 150.5 86.15625 L 155.5 86.15625 L 157.5 86.15625 L 162.5 86.15625 L 165.5 87.15625 L 167.5 89.15625 L 168.5 92.15625 L 169.5 96.15625 L 169.5 99.15625 L 170.5 104.15625 L 170.5 106.15625 L 170.5 109.15625 L 170.5 110.15625 L 170.5 112.15625 L 170.5 113.15625 L 170.5 113.15625 L 170.5 114.15625 L 170.5 112.15625 L 172.5 107.15625 L 176.5 101.15625 L 179.5 94.15625 L 184.5 85.15625 L 191.5 76.15625 L 194.5 72.15625 L 199.5 63.15625 L 206.5 57.15625 L 212.5 50.15625 L 217.5 45.15625 L 223.5 42.15625 L 225.5 41.15625 L 232.5 38.15625 L 233.5 38.15625 L 237.5 38.15625 L 240.5 38.15625 L 242.5 40.15625 L 244.5 43.15625 L 246.5 47.15625 L 247.5 52.15625 L 249.5 58.15625 L 251.5 63.15625 L 252.5 69.15625 L 253.5 75.15625 L 254.5 80.15625 L 254.5 86.15625 L 254.5 92.15625 L 254.5 97.15625 L 254.5 99.15625 L 254.5 103.15625 L 254.5 105.15625 L 254.5 107.15625 L 254.5 108.15625 L 253.5 109.15625 L 253.5 110.15625 L 252.5 110.15625 L 252.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 253.5 110.15625 L 256.5 110.15625 L 261.5 110.15625 L 267.5 111.15625 L 274.5 114.15625 L 282.5 117.15625 L 292.5 122.15625 L 300.5 128.15625 L 308.5 135.15625 L 311.5 139.15625 L 316.5 145.15625 L 321.5 152.15625 L 324.5 157.15625 L 326.5 162.15625 L 327.5 167.15625 L 327.5 169.15625 L 327.5 172.15625 L 327.5 175.15625 L 327.5 178.15625 L 327.5 180.15625 L 326.5 183.15625 L 324.5 185.15625 L 322.5 187.15625 L 319.5 189.15625 L 316.5 190.15625 L 313.5 193.15625 L 309.5 194.15625 L 307.5 195.15625 L 304.5 196.15625 L 303.5 197.15625 L 301.5 198.15625 L 300.5 199.15625 L 299.5 199.15625 L 299.5 199.15625 L 299.5 199.15625 L 301.5 200.15625 L 302.5 201.15625 L 304.5 205.15625 L 306.5 207.15625 L 307.5 211.15625 L 309.5 216.15625 L 311.5 222.15625 L 311.5 227.15625 L 312.5 233.15625 L 312.5 237.15625 L 312.5 241.15625 L 312.5 245.15625 L 310.5 249.15625 L 308.5 252.15625 L 306.5 254.15625 L 303.5 256.15625 L 300.5 259.15625 L 295.5 261.15625 L 291.5 263.15625 L 290.5 264.15625 L 286.5 265.15625 L 283.5 266.15625 L 280.5 266.15625 L 277.5 266.15625 L 275.5 266.15625 L 273.5 266.15625 L 271.5 266.15625 L 270.5 265.15625 L 269.5 264.15625 L 268.5 263.15625 L 268.5 262.15625 L 267.5 261.15625 L 267.5 260.15625 L 267.5 259.15625 L 267.5 259.15625 L 267.5 259.15625 L 268.5 259.15625 L 269.5 259.15625 L 270.5 260.15625 L 271.5 262.15625 L 271.5 263.15625 L 272.5 265.15625 L 272.5 267.15625 L 272.5 269.15625 L 272.5 272.15625 L 270.5 276.15625 L 268.5 279.15625 L 266.5 283.15625 L 262.5 286.15625 L 259.5 289.15625 L 256.5 292.15625 L 252.5 295.15625 L 250.5 296.15625 L 247.5 298.15625 L 245.5 300.15625 L 242.5 301.15625 L 239.5 302.15625 L 236.5 304.15625 L 233.5 304.15625 L 230.5 304.15625 L 227.5 304.15625 L 224.5 304.15625 L 220.5 304.15625 L 219.5 304.15625 L 216.5 303.15625 L 213.5 302.15625 L 212.5 301.15625 L 210.5 299.15625 L 209.5 298.15625 L 208.5 296.15625 L 207.5 294.15625 L 207.5 292.15625 L 207.5 290.15625 L 207.5 289.15625 L 207.5 287.15625 L 207.5 286.15625 L 208.5 285.15625 L 209.5 285.15625 L 210.5 284.15625 L 210.5 284.15625 L 211.5 284.15625 L 212.5 284.15625 L 212.5 284.15625 L 213.5 284.15625 L 213.5 284.15625 L 213.5 285.15625 L 213.5 286.15625 L 213.5 288.15625 L 213.5 290.15625 L 213.5 291.15625 L 212.5 293.15625 L 210.5 295.15625 L 209.5 297.15625 L 208.5 298.15625 L 206.5 300.15625 L 205.5 301.15625 L 202.5 302.15625 L 201.5 303.15625 L 198.5 303.15625 L 194.5 304.15625 L 189.5 304.15625 L 185.5 304.15625 L 179.5 304.15625 L 174.5 304.15625 L 169.5 303.15625 L 163.5 300.15625 L 158.5 298.15625 L 153.5 295.15625 L 148.5 292.15625 L 143.5 288.15625 L 138.5 283.15625 L 135.5 279.15625 L 130.5 274.15625 L 127.5 269.15625 L 124.5 264.15625 L 121.5 259.15625 L 121.5 257.15625 L 120.5 253.15625 L 118.5 247.15625 L 118.5 246.15625 L 118.5 241.15625 L 118.5 238.15625 L 118.5 234.15625 L 120.5 231.15625 L 121.5 229.15625 L 123.5 227.15625 L 125.5 225.15625 L 127.5 223.15625 L 128.5 222.15625 L 129.5 222.15625 L 131.5 221.15625 L 132.5 220.15625 L 132.5 220.15625 L 133.5 220.15625 L 133.5 220.15625 L 133.5 220.15625 L 134.5 220.15625 L 133.5 220.15625 L 131.5 220.15625 L 129.5 221.15625 L 127.5 221.15625 L 124.5 221.15625 L 121.5 222.15625 L 117.5 222.15625 L 113.5 222.15625 L 109.5 222.15625 L 105.5 222.15625 L 101.5 222.15625 L 99.5 222.15625 L 96.5 222.15625 L 93.5 222.15625 L 90.5 221.15625 L 88.5 220.15625 L 86.5 219.15625 L 85.5 219.15625 L 83.5 217.15625 L 82.5 216.15625 L 81.5 215.15625 L 80.5 213.15625 L 79.5 212.15625 L 79.5 210.15625 L 78.5 208.15625 L 78.5 205.15625 L 78.5 203.15625 L 78.5 201.15625 L 78.5 199.15625 L 78.5 196.15625 L 78.5 195.15625 L 78.5 193.15625 L 78.5 191.15625 L 79.5 190.15625 L 79.5 188.15625 L 80.5 187.15625 L 81.5 186.15625 L 81.5 185.15625 L 82.5 184.15625 L 83.5 183.15625 L 84.5 182.15625 L 86.5 181.15625 L 87.5 180.15625 L 89.5 179.15625 L 91.5 179.15625 L 92.5 178.15625 L 94.5 177.15625 L 96.5 176.15625 L 97.5 176.15625 L 99.5 175.15625 L 100.5 175.15625 L 102.5 174.15625 L 103.5 174.15625 L 104.5 174.15625 L 105.5 173.15625 L 106.5 173.15625 L 107.5 172.15625 L 108.5 172.15625 L 109.5 171.15625 L 110.5 171.15625 L 110.5 171.15625 L 111.5 171.15625 L 112.5 171.15625 L 112.5 170.15625 L 113.5 170.15625 L 114.5 170.15625 L 115.5 170.15625 L 115.5 170.15625 L 116.5 169.15625 L 117.5 169.15625 L 118.5 169.15625 L 119.5 168.15625 L 120.5 168.15625 L 120.5 168.15625 L 121.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 124.5 167.15625 L 124.5 167.15625 L 124.5 167.15625 L 125.5 166.15625 L 125.5 166.15625 L 126.5 166.15625 L 127.5 165.15625 L 128.5 165.15625 L 128.5 165.15625 L 129.5 165.15625 L 129.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 131.5 164.15625 L 131.5 164.15625 L 131.5 163.15625 L 131.5 163.15625"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:42:in `create'
+[31mUnpermitted parameters: :category_id, :doodle[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/doodles_controller.rb:43:in `create'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `create'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:43:in `create'
+  [1m[36mDoodle Create (0.4ms)[0m  [1m[32mINSERT INTO "doodles" ("title", "path", "created_by", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "cloud"], ["path", "M 139.5 161.15625 L 138.5 161.15625 L 137.5 161.15625 L 136.5 161.15625 L 134.5 161.15625 L 132.5 161.15625 L 129.5 160.15625 L 128.5 160.15625 L 125.5 159.15625 L 122.5 158.15625 L 118.5 157.15625 L 114.5 156.15625 L 111.5 154.15625 L 108.5 152.15625 L 107.5 152.15625 L 102.5 149.15625 L 102.5 148.15625 L 100.5 146.15625 L 98.5 144.15625 L 97.5 142.15625 L 97.5 140.15625 L 96.5 138.15625 L 95.5 137.15625 L 95.5 133.15625 L 95.5 131.15625 L 95.5 128.15625 L 95.5 125.15625 L 97.5 121.15625 L 99.5 118.15625 L 102.5 114.15625 L 106.5 109.15625 L 110.5 104.15625 L 114.5 101.15625 L 120.5 97.15625 L 125.5 94.15625 L 132.5 90.15625 L 138.5 88.15625 L 144.5 87.15625 L 150.5 86.15625 L 155.5 86.15625 L 157.5 86.15625 L 162.5 86.15625 L 165.5 87.15625 L 167.5 89.15625 L 168.5 92.15625 L 169.5 96.15625 L 169.5 99.15625 L 170.5 104.15625 L 170.5 106.15625 L 170.5 109.15625 L 170.5 110.15625 L 170.5 112.15625 L 170.5 113.15625 L 170.5 113.15625 L 170.5 114.15625 L 170.5 112.15625 L 172.5 107.15625 L 176.5 101.15625 L 179.5 94.15625 L 184.5 85.15625 L 191.5 76.15625 L 194.5 72.15625 L 199.5 63.15625 L 206.5 57.15625 L 212.5 50.15625 L 217.5 45.15625 L 223.5 42.15625 L 225.5 41.15625 L 232.5 38.15625 L 233.5 38.15625 L 237.5 38.15625 L 240.5 38.15625 L 242.5 40.15625 L 244.5 43.15625 L 246.5 47.15625 L 247.5 52.15625 L 249.5 58.15625 L 251.5 63.15625 L 252.5 69.15625 L 253.5 75.15625 L 254.5 80.15625 L 254.5 86.15625 L 254.5 92.15625 L 254.5 97.15625 L 254.5 99.15625 L 254.5 103.15625 L 254.5 105.15625 L 254.5 107.15625 L 254.5 108.15625 L 253.5 109.15625 L 253.5 110.15625 L 252.5 110.15625 L 252.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 251.5 110.15625 L 253.5 110.15625 L 256.5 110.15625 L 261.5 110.15625 L 267.5 111.15625 L 274.5 114.15625 L 282.5 117.15625 L 292.5 122.15625 L 300.5 128.15625 L 308.5 135.15625 L 311.5 139.15625 L 316.5 145.15625 L 321.5 152.15625 L 324.5 157.15625 L 326.5 162.15625 L 327.5 167.15625 L 327.5 169.15625 L 327.5 172.15625 L 327.5 175.15625 L 327.5 178.15625 L 327.5 180.15625 L 326.5 183.15625 L 324.5 185.15625 L 322.5 187.15625 L 319.5 189.15625 L 316.5 190.15625 L 313.5 193.15625 L 309.5 194.15625 L 307.5 195.15625 L 304.5 196.15625 L 303.5 197.15625 L 301.5 198.15625 L 300.5 199.15625 L 299.5 199.15625 L 299.5 199.15625 L 299.5 199.15625 L 301.5 200.15625 L 302.5 201.15625 L 304.5 205.15625 L 306.5 207.15625 L 307.5 211.15625 L 309.5 216.15625 L 311.5 222.15625 L 311.5 227.15625 L 312.5 233.15625 L 312.5 237.15625 L 312.5 241.15625 L 312.5 245.15625 L 310.5 249.15625 L 308.5 252.15625 L 306.5 254.15625 L 303.5 256.15625 L 300.5 259.15625 L 295.5 261.15625 L 291.5 263.15625 L 290.5 264.15625 L 286.5 265.15625 L 283.5 266.15625 L 280.5 266.15625 L 277.5 266.15625 L 275.5 266.15625 L 273.5 266.15625 L 271.5 266.15625 L 270.5 265.15625 L 269.5 264.15625 L 268.5 263.15625 L 268.5 262.15625 L 267.5 261.15625 L 267.5 260.15625 L 267.5 259.15625 L 267.5 259.15625 L 267.5 259.15625 L 268.5 259.15625 L 269.5 259.15625 L 270.5 260.15625 L 271.5 262.15625 L 271.5 263.15625 L 272.5 265.15625 L 272.5 267.15625 L 272.5 269.15625 L 272.5 272.15625 L 270.5 276.15625 L 268.5 279.15625 L 266.5 283.15625 L 262.5 286.15625 L 259.5 289.15625 L 256.5 292.15625 L 252.5 295.15625 L 250.5 296.15625 L 247.5 298.15625 L 245.5 300.15625 L 242.5 301.15625 L 239.5 302.15625 L 236.5 304.15625 L 233.5 304.15625 L 230.5 304.15625 L 227.5 304.15625 L 224.5 304.15625 L 220.5 304.15625 L 219.5 304.15625 L 216.5 303.15625 L 213.5 302.15625 L 212.5 301.15625 L 210.5 299.15625 L 209.5 298.15625 L 208.5 296.15625 L 207.5 294.15625 L 207.5 292.15625 L 207.5 290.15625 L 207.5 289.15625 L 207.5 287.15625 L 207.5 286.15625 L 208.5 285.15625 L 209.5 285.15625 L 210.5 284.15625 L 210.5 284.15625 L 211.5 284.15625 L 212.5 284.15625 L 212.5 284.15625 L 213.5 284.15625 L 213.5 284.15625 L 213.5 285.15625 L 213.5 286.15625 L 213.5 288.15625 L 213.5 290.15625 L 213.5 291.15625 L 212.5 293.15625 L 210.5 295.15625 L 209.5 297.15625 L 208.5 298.15625 L 206.5 300.15625 L 205.5 301.15625 L 202.5 302.15625 L 201.5 303.15625 L 198.5 303.15625 L 194.5 304.15625 L 189.5 304.15625 L 185.5 304.15625 L 179.5 304.15625 L 174.5 304.15625 L 169.5 303.15625 L 163.5 300.15625 L 158.5 298.15625 L 153.5 295.15625 L 148.5 292.15625 L 143.5 288.15625 L 138.5 283.15625 L 135.5 279.15625 L 130.5 274.15625 L 127.5 269.15625 L 124.5 264.15625 L 121.5 259.15625 L 121.5 257.15625 L 120.5 253.15625 L 118.5 247.15625 L 118.5 246.15625 L 118.5 241.15625 L 118.5 238.15625 L 118.5 234.15625 L 120.5 231.15625 L 121.5 229.15625 L 123.5 227.15625 L 125.5 225.15625 L 127.5 223.15625 L 128.5 222.15625 L 129.5 222.15625 L 131.5 221.15625 L 132.5 220.15625 L 132.5 220.15625 L 133.5 220.15625 L 133.5 220.15625 L 133.5 220.15625 L 134.5 220.15625 L 133.5 220.15625 L 131.5 220.15625 L 129.5 221.15625 L 127.5 221.15625 L 124.5 221.15625 L 121.5 222.15625 L 117.5 222.15625 L 113.5 222.15625 L 109.5 222.15625 L 105.5 222.15625 L 101.5 222.15625 L 99.5 222.15625 L 96.5 222.15625 L 93.5 222.15625 L 90.5 221.15625 L 88.5 220.15625 L 86.5 219.15625 L 85.5 219.15625 L 83.5 217.15625 L 82.5 216.15625 L 81.5 215.15625 L 80.5 213.15625 L 79.5 212.15625 L 79.5 210.15625 L 78.5 208.15625 L 78.5 205.15625 L 78.5 203.15625 L 78.5 201.15625 L 78.5 199.15625 L 78.5 196.15625 L 78.5 195.15625 L 78.5 193.15625 L 78.5 191.15625 L 79.5 190.15625 L 79.5 188.15625 L 80.5 187.15625 L 81.5 186.15625 L 81.5 185.15625 L 82.5 184.15625 L 83.5 183.15625 L 84.5 182.15625 L 86.5 181.15625 L 87.5 180.15625 L 89.5 179.15625 L 91.5 179.15625 L 92.5 178.15625 L 94.5 177.15625 L 96.5 176.15625 L 97.5 176.15625 L 99.5 175.15625 L 100.5 175.15625 L 102.5 174.15625 L 103.5 174.15625 L 104.5 174.15625 L 105.5 173.15625 L 106.5 173.15625 L 107.5 172.15625 L 108.5 172.15625 L 109.5 171.15625 L 110.5 171.15625 L 110.5 171.15625 L 111.5 171.15625 L 112.5 171.15625 L 112.5 170.15625 L 113.5 170.15625 L 114.5 170.15625 L 115.5 170.15625 L 115.5 170.15625 L 116.5 169.15625 L 117.5 169.15625 L 118.5 169.15625 L 119.5 168.15625 L 120.5 168.15625 L 120.5 168.15625 L 121.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 122.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 123.5 167.15625 L 124.5 167.15625 L 124.5 167.15625 L 124.5 167.15625 L 125.5 166.15625 L 125.5 166.15625 L 126.5 166.15625 L 127.5 165.15625 L 128.5 165.15625 L 128.5 165.15625 L 129.5 165.15625 L 129.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 130.5 164.15625 L 131.5 164.15625 L 131.5 164.15625 L 131.5 163.15625 L 131.5 163.15625"], ["created_by", 2], ["category_id", 4], ["created_at", "2020-02-19 21:57:35.640125"], ["updated_at", "2020-02-19 21:57:35.640125"]]
+  ↳ app/controllers/doodles_controller.rb:43:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/doodles_controller.rb:43:in `create'
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 8553)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:57:43 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.4ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 2161)
+
+
+Started GET "/categories/4/doodles/6" for ::1 at 2020-02-19 16:57:52 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"4", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 4], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 2075)
+
+
+Started DELETE "/categories/4/doodles/6" for ::1 at 2020-02-19 16:57:56 -0500
+Processing by DoodlesController#destroy as HTML
+  Parameters: {"category_id"=>"4", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:59:in `destroy'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 4], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:61:in `destroy'
+  [1m[36mDoodle Destroy (1.8ms)[0m  [1m[31mDELETE FROM "doodles" WHERE "doodles"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/doodles_controller.rb:62:in `destroy'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.4ms | Allocations: 2404)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 16:57:58 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 2018)
+
+
+Started GET "/categories/3/doodles/2" for ::1 at 2020-02-19 16:58:03 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.6ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 1.2ms | Allocations: 2075)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 17:12:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (2.4ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 2.9ms | Allocations: 2055)
+
+
+Started GET "/categories/3/doodles/2" for ::1 at 2020-02-19 17:12:30 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 2109)
+
+
+Started DELETE "/categories/3/doodles/2" for ::1 at 2020-02-19 17:12:33 -0500
+Processing by DoodlesController#destroy as HTML
+  Parameters: {"category_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:59:in `destroy'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:61:in `destroy'
+  [1m[36mDoodle Destroy (2.0ms)[0m  [1m[31mDELETE FROM "doodles" WHERE "doodles"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/doodles_controller.rb:62:in `destroy'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 2404)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 17:12:46 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.4ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.7ms | Allocations: 1874)
+
+
+Started GET "/categories/7/doodles/3" for ::1 at 2020-02-19 17:12:56 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"7", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 7], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.7ms | Allocations: 2075)
+
+
+Started GET "/categories/7/doodles/3" for ::1 at 2020-02-19 17:13:26 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"7", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 7], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 2077)
+
+
+Started PUT "/categories/7/doodles/3" for ::1 at 2020-02-19 17:13:46 -0500
+Processing by DoodlesController#update as HTML
+  Parameters: {"title"=>"house updated", "path"=>"M 118.5 373.15625 L 119.5 373.15625 L 120.5 373.15625 L 122.5 373.15625 L 124.5 373.15625 L 125.5 373.15625 L 127.5 373.15625 L 128.5 373.15625 L 132.5 373.15625 L 134.5 373.15625 L 136.5 373.15625 L 137.5 373.15625 L 138.5 374.15625 L 140.5 374.15625 L 142.5 375.15625 L 142.5 375.15625 L 143.5 375.15625 L 144.5 376.15625 L 145.5 376.15625 L 146.5 376.15625 L 147.5 376.15625 L 148.5 376.15625 L 150.5 376.15625 L 151.5 376.15625 L 152.5 377.15625 L 154.5 377.15625 L 155.5 377.15625 L 156.5 377.15625 L 157.5 377.15625 L 158.5 377.15625 L 159.5 377.15625 L 159.5 377.15625 L 159.5 377.15625 L 159.5 377.15625 L 160.5 377.15625 L 160.5 377.15625 L 160.5 377.15625 L 161.5 377.15625 L 162.5 377.15625 L 163.5 377.15625 L 165.5 377.15625 L 167.5 377.15625 L 168.5 376.15625 L 170.5 375.15625 L 171.5 375.15625 L 172.5 375.15625 L 173.5 374.15625 L 173.5 374.15625 L 174.5 374.15625 L 173.5 374.15625 L 173.5 374.15625 L 173.5 374.15625 L 173.5 374.15625 L 173.5 373.15625 L 172.5 373.15625 L 171.5 372.15625 L 170.5 371.15625 L 169.5 369.15625 L 168.5 368.15625 L 166.5 365.15625 L 164.5 363.15625 L 163.5 361.15625 L 161.5 358.15625 L 159.5 355.15625 L 158.5 352.15625 L 156.5 349.15625 L 154.5 346.15625 L 153.5 343.15625 L 151.5 340.15625 L 150.5 336.15625 L 149.5 332.15625 L 148.5 329.15625 L 147.5 326.15625 L 147.5 323.15625 L 146.5 320.15625 L 146.5 318.15625 L 146.5 315.15625 L 146.5 313.15625 L 146.5 312.15625 L 146.5 310.15625 L 146.5 309.15625 L 146.5 307.15625 L 148.5 305.15625 L 150.5 302.15625 L 153.5 299.15625 L 155.5 298.15625 L 158.5 296.15625 L 160.5 295.15625 L 162.5 294.15625 L 165.5 294.15625 L 167.5 293.15625 L 169.5 293.15625 L 171.5 293.15625 L 174.5 292.15625 L 177.5 292.15625 L 180.5 292.15625 L 183.5 292.15625 L 185.5 292.15625 L 188.5 292.15625 L 190.5 292.15625 L 192.5 292.15625 L 194.5 292.15625 L 195.5 292.15625 L 197.5 293.15625 L 200.5 294.15625 L 202.5 295.15625 L 203.5 297.15625 L 205.5 298.15625 L 206.5 299.15625 L 208.5 301.15625 L 209.5 303.15625 L 210.5 305.15625 L 212.5 307.15625 L 213.5 309.15625 L 214.5 312.15625 L 215.5 314.15625 L 216.5 315.15625 L 216.5 317.15625 L 217.5 320.15625 L 218.5 323.15625 L 218.5 325.15625 L 219.5 327.15625 L 219.5 329.15625 L 219.5 332.15625 L 220.5 334.15625 L 220.5 337.15625 L 220.5 339.15625 L 220.5 342.15625 L 220.5 346.15625 L 220.5 348.15625 L 220.5 351.15625 L 219.5 353.15625 L 219.5 355.15625 L 219.5 357.15625 L 219.5 358.15625 L 219.5 359.15625 L 219.5 360.15625 L 219.5 361.15625 L 219.5 361.15625 L 219.5 362.15625 L 219.5 363.15625 L 218.5 364.15625 L 218.5 365.15625 L 217.5 366.15625 L 216.5 367.15625 L 216.5 368.15625 L 216.5 368.15625 L 215.5 369.15625 L 215.5 369.15625 L 215.5 369.15625 L 215.5 370.15625 L 215.5 370.15625 L 214.5 370.15625 L 214.5 370.15625 L 214.5 371.15625 L 214.5 371.15625 L 214.5 370.15625 L 214.5 370.15625 L 214.5 370.15625 L 215.5 370.15625 L 215.5 369.15625 L 215.5 369.15625 L 216.5 369.15625 L 217.5 369.15625 L 218.5 368.15625 L 220.5 368.15625 L 221.5 368.15625 L 222.5 367.15625 L 224.5 367.15625 L 226.5 367.15625 L 228.5 367.15625 L 231.5 367.15625 L 232.5 367.15625 L 233.5 367.15625 L 234.5 367.15625 L 235.5 367.15625 L 236.5 367.15625 L 237.5 367.15625 L 238.5 367.15625 L 240.5 367.15625 L 241.5 367.15625 L 243.5 367.15625 L 245.5 367.15625 L 247.5 367.15625 L 250.5 366.15625 L 252.5 366.15625 L 257.5 366.15625 L 258.5 366.15625 L 259.5 366.15625 L 260.5 366.15625 L 260.5 366.15625 L 261.5 366.15625 L 261.5 366.15625 L 261.5 366.15625 L 261.5 366.15625 L 262.5 366.15625 L 262.5 366.15625 L 262.5 366.15625 L 264.5 366.15625 L 264.5 366.15625 L 265.5 366.15625 L 265.5 366.15625 L 265.5 366.15625 L 265.5 366.15625 L 266.5 365.15625 L 266.5 364.15625 L 266.5 363.15625 L 266.5 361.15625 L 266.5 357.15625 L 266.5 355.15625 L 266.5 352.15625 L 267.5 349.15625 L 267.5 347.15625 L 267.5 344.15625 L 267.5 342.15625 L 267.5 339.15625 L 267.5 337.15625 L 267.5 334.15625 L 267.5 332.15625 L 267.5 328.15625 L 267.5 325.15625 L 267.5 322.15625 L 267.5 319.15625 L 267.5 317.15625 L 267.5 313.15625 L 267.5 310.15625 L 267.5 307.15625 L 267.5 304.15625 L 267.5 301.15625 L 267.5 297.15625 L 267.5 292.15625 L 267.5 287.15625 L 267.5 284.15625 L 267.5 280.15625 L 268.5 275.15625 L 269.5 272.15625 L 269.5 268.15625 L 269.5 266.15625 L 269.5 264.15625 L 269.5 263.15625 L 269.5 262.15625 L 269.5 262.15625 L 269.5 260.15625 L 269.5 257.15625 L 269.5 254.15625 L 269.5 251.15625 L 269.5 249.15625 L 269.5 247.15625 L 269.5 246.15625 L 269.5 245.15625 L 269.5 243.15625 L 270.5 242.15625 L 270.5 241.15625 L 270.5 240.15625 L 270.5 240.15625 L 270.5 239.15625 L 270.5 239.15625 L 270.5 238.15625 L 270.5 237.15625 L 270.5 236.15625 L 270.5 235.15625 L 270.5 235.15625 L 270.5 234.15625 L 270.5 234.15625 L 270.5 233.15625 L 270.5 233.15625 L 270.5 233.15625 L 270.5 233.15625 L 271.5 233.15625 L 272.5 233.15625 L 274.5 233.15625 L 276.5 234.15625 L 279.5 234.15625 L 282.5 234.15625 L 285.5 234.15625 L 288.5 234.15625 L 291.5 235.15625 L 293.5 235.15625 L 296.5 236.15625 L 297.5 236.15625 L 299.5 236.15625 L 300.5 236.15625 L 301.5 237.15625 L 302.5 237.15625 L 303.5 237.15625 L 304.5 237.15625 L 306.5 237.15625 L 308.5 237.15625 L 310.5 237.15625 L 312.5 236.15625 L 314.5 236.15625 L 316.5 235.15625 L 318.5 234.15625 L 320.5 234.15625 L 321.5 234.15625 L 322.5 234.15625 L 323.5 234.15625 L 324.5 233.15625 L 325.5 233.15625 L 327.5 233.15625 L 329.5 232.15625 L 330.5 232.15625 L 331.5 232.15625 L 332.5 232.15625 L 332.5 232.15625 L 333.5 231.15625 L 333.5 231.15625 L 333.5 230.15625 L 331.5 227.15625 L 329.5 225.15625 L 328.5 224.15625 L 326.5 222.15625 L 325.5 221.15625 L 322.5 219.15625 L 321.5 217.15625 L 319.5 216.15625 L 318.5 215.15625 L 316.5 213.15625 L 314.5 212.15625 L 313.5 211.15625 L 311.5 209.15625 L 309.5 207.15625 L 308.5 206.15625 L 305.5 204.15625 L 302.5 202.15625 L 296.5 200.15625 L 292.5 198.15625 L 288.5 196.15625 L 284.5 195.15625 L 279.5 192.15625 L 275.5 191.15625 L 271.5 188.15625 L 267.5 185.15625 L 263.5 182.15625 L 260.5 179.15625 L 256.5 176.15625 L 251.5 172.15625 L 248.5 169.15625 L 245.5 166.15625 L 241.5 163.15625 L 237.5 161.15625 L 233.5 159.15625 L 230.5 156.15625 L 226.5 153.15625 L 223.5 151.15625 L 220.5 148.15625 L 214.5 143.15625 L 211.5 140.15625 L 207.5 137.15625 L 204.5 135.15625 L 201.5 133.15625 L 199.5 130.15625 L 196.5 128.15625 L 193.5 126.15625 L 191.5 124.15625 L 188.5 121.15625 L 186.5 119.15625 L 184.5 117.15625 L 181.5 114.15625 L 179.5 112.15625 L 177.5 110.15625 L 175.5 108.15625 L 173.5 107.15625 L 172.5 106.15625 L 171.5 104.15625 L 170.5 104.15625 L 169.5 102.15625 L 168.5 102.15625 L 168.5 101.15625 L 167.5 100.15625 L 167.5 100.15625 L 167.5 99.15625 L 166.5 99.15625 L 166.5 98.15625 L 166.5 98.15625 L 165.5 97.15625 L 165.5 96.15625 L 165.5 96.15625 L 165.5 96.15625 L 164.5 96.15625 L 164.5 96.15625 L 164.5 96.15625 L 162.5 97.15625 L 161.5 99.15625 L 159.5 100.15625 L 157.5 102.15625 L 154.5 105.15625 L 151.5 108.15625 L 147.5 111.15625 L 142.5 115.15625 L 139.5 117.15625 L 137.5 118.15625 L 134.5 121.15625 L 132.5 122.15625 L 129.5 124.15625 L 126.5 127.15625 L 123.5 129.15625 L 118.5 133.15625 L 114.5 135.15625 L 109.5 138.15625 L 103.5 143.15625 L 98.5 146.15625 L 94.5 149.15625 L 90.5 153.15625 L 85.5 157.15625 L 80.5 161.15625 L 76.5 164.15625 L 72.5 168.15625 L 67.5 172.15625 L 63.5 176.15625 L 58.5 180.15625 L 53.5 184.15625 L 50.5 187.15625 L 47.5 190.15625 L 45.5 191.15625 L 43.5 193.15625 L 42.5 195.15625 L 40.5 197.15625 L 39.5 199.15625 L 37.5 200.15625 L 36.5 201.15625 L 36.5 202.15625 L 35.5 203.15625 L 35.5 204.15625 L 34.5 205.15625 L 33.5 205.15625 L 33.5 207.15625 L 32.5 207.15625 L 31.5 208.15625 L 30.5 209.15625 L 29.5 210.15625 L 28.5 211.15625 L 27.5 212.15625 L 25.5 213.15625 L 25.5 214.15625 L 24.5 215.15625 L 24.5 215.15625 L 24.5 216.15625 L 24.5 216.15625 L 24.5 216.15625 L 25.5 216.15625 L 27.5 216.15625 L 29.5 217.15625 L 32.5 218.15625 L 35.5 218.15625 L 38.5 219.15625 L 44.5 220.15625 L 48.5 221.15625 L 53.5 222.15625 L 57.5 222.15625 L 61.5 222.15625 L 64.5 223.15625 L 67.5 223.15625 L 69.5 223.15625 L 71.5 223.15625 L 73.5 224.15625 L 74.5 224.15625 L 76.5 224.15625 L 79.5 224.15625 L 82.5 225.15625 L 85.5 225.15625 L 87.5 225.15625 L 89.5 226.15625 L 90.5 226.15625 L 91.5 226.15625 L 92.5 227.15625 L 93.5 227.15625 L 94.5 227.15625 L 94.5 227.15625 L 95.5 227.15625 L 95.5 228.15625 L 96.5 228.15625 L 96.5 228.15625 L 96.5 228.15625 L 97.5 228.15625 L 97.5 229.15625 L 97.5 229.15625 L 97.5 229.15625 L 97.5 235.15625 L 97.5 238.15625 L 97.5 240.15625 L 97.5 244.15625 L 98.5 247.15625 L 98.5 250.15625 L 99.5 253.15625 L 100.5 257.15625 L 100.5 261.15625 L 101.5 264.15625 L 101.5 266.15625 L 101.5 268.15625 L 101.5 270.15625 L 101.5 272.15625 L 101.5 274.15625 L 101.5 276.15625 L 101.5 279.15625 L 101.5 281.15625 L 101.5 284.15625 L 101.5 288.15625 L 101.5 290.15625 L 101.5 291.15625 L 101.5 293.15625 L 101.5 295.15625 L 101.5 296.15625 L 101.5 298.15625 L 101.5 300.15625 L 101.5 302.15625 L 101.5 304.15625 L 101.5 306.15625 L 101.5 308.15625 L 101.5 311.15625 L 101.5 311.15625 L 101.5 312.15625 L 101.5 315.15625 L 101.5 317.15625 L 101.5 318.15625 L 101.5 319.15625 L 102.5 320.15625 L 102.5 321.15625 L 102.5 322.15625 L 103.5 324.15625 L 103.5 326.15625 L 103.5 327.15625 L 103.5 328.15625 L 103.5 330.15625 L 104.5 331.15625 L 104.5 333.15625 L 104.5 334.15625 L 105.5 336.15625 L 105.5 338.15625 L 105.5 339.15625 L 106.5 340.15625 L 106.5 341.15625 L 106.5 343.15625 L 106.5 344.15625 L 106.5 345.15625 L 106.5 346.15625 L 107.5 347.15625 L 107.5 348.15625 L 107.5 349.15625 L 108.5 350.15625 L 108.5 351.15625 L 108.5 353.15625 L 108.5 354.15625 L 109.5 356.15625 L 109.5 358.15625 L 109.5 360.15625 L 109.5 361.15625 L 109.5 362.15625 L 110.5 363.15625 L 110.5 364.15625 L 110.5 364.15625 L 110.5 365.15625 L 110.5 365.15625 L 110.5 365.15625 L 110.5 366.15625 L 111.5 366.15625 L 111.5 366.15625 L 111.5 367.15625 L 111.5 367.15625 L 111.5 368.15625 L 111.5 368.15625 L 111.5 368.15625 L 111.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 370.15625 L 112.5 370.15625 L 113.5 370.15625 L 113.5 370.15625 L 113.5 370.15625 L 113.5 371.15625 L 113.5 371.15625 L 113.5 371.15625 L 113.5 371.15625 L 114.5 371.15625", "doodle"=>{"id"=>3, "title"=>"house", "path"=>"M 118.5 373.15625 L 119.5 373.15625 L 120.5 373.15625 L 122.5 373.15625 L 124.5 373.15625 L 125.5 373.15625 L 127.5 373.15625 L 128.5 373.15625 L 132.5 373.15625 L 134.5 373.15625 L 136.5 373.15625 L 137.5 373.15625 L 138.5 374.15625 L 140.5 374.15625 L 142.5 375.15625 L 142.5 375.15625 L 143.5 375.15625 L 144.5 376.15625 L 145.5 376.15625 L 146.5 376.15625 L 147.5 376.15625 L 148.5 376.15625 L 150.5 376.15625 L 151.5 376.15625 L 152.5 377.15625 L 154.5 377.15625 L 155.5 377.15625 L 156.5 377.15625 L 157.5 377.15625 L 158.5 377.15625 L 159.5 377.15625 L 159.5 377.15625 L 159.5 377.15625 L 159.5 377.15625 L 160.5 377.15625 L 160.5 377.15625 L 160.5 377.15625 L 161.5 377.15625 L 162.5 377.15625 L 163.5 377.15625 L 165.5 377.15625 L 167.5 377.15625 L 168.5 376.15625 L 170.5 375.15625 L 171.5 375.15625 L 172.5 375.15625 L 173.5 374.15625 L 173.5 374.15625 L 174.5 374.15625 L 173.5 374.15625 L 173.5 374.15625 L 173.5 374.15625 L 173.5 374.15625 L 173.5 373.15625 L 172.5 373.15625 L 171.5 372.15625 L 170.5 371.15625 L 169.5 369.15625 L 168.5 368.15625 L 166.5 365.15625 L 164.5 363.15625 L 163.5 361.15625 L 161.5 358.15625 L 159.5 355.15625 L 158.5 352.15625 L 156.5 349.15625 L 154.5 346.15625 L 153.5 343.15625 L 151.5 340.15625 L 150.5 336.15625 L 149.5 332.15625 L 148.5 329.15625 L 147.5 326.15625 L 147.5 323.15625 L 146.5 320.15625 L 146.5 318.15625 L 146.5 315.15625 L 146.5 313.15625 L 146.5 312.15625 L 146.5 310.15625 L 146.5 309.15625 L 146.5 307.15625 L 148.5 305.15625 L 150.5 302.15625 L 153.5 299.15625 L 155.5 298.15625 L 158.5 296.15625 L 160.5 295.15625 L 162.5 294.15625 L 165.5 294.15625 L 167.5 293.15625 L 169.5 293.15625 L 171.5 293.15625 L 174.5 292.15625 L 177.5 292.15625 L 180.5 292.15625 L 183.5 292.15625 L 185.5 292.15625 L 188.5 292.15625 L 190.5 292.15625 L 192.5 292.15625 L 194.5 292.15625 L 195.5 292.15625 L 197.5 293.15625 L 200.5 294.15625 L 202.5 295.15625 L 203.5 297.15625 L 205.5 298.15625 L 206.5 299.15625 L 208.5 301.15625 L 209.5 303.15625 L 210.5 305.15625 L 212.5 307.15625 L 213.5 309.15625 L 214.5 312.15625 L 215.5 314.15625 L 216.5 315.15625 L 216.5 317.15625 L 217.5 320.15625 L 218.5 323.15625 L 218.5 325.15625 L 219.5 327.15625 L 219.5 329.15625 L 219.5 332.15625 L 220.5 334.15625 L 220.5 337.15625 L 220.5 339.15625 L 220.5 342.15625 L 220.5 346.15625 L 220.5 348.15625 L 220.5 351.15625 L 219.5 353.15625 L 219.5 355.15625 L 219.5 357.15625 L 219.5 358.15625 L 219.5 359.15625 L 219.5 360.15625 L 219.5 361.15625 L 219.5 361.15625 L 219.5 362.15625 L 219.5 363.15625 L 218.5 364.15625 L 218.5 365.15625 L 217.5 366.15625 L 216.5 367.15625 L 216.5 368.15625 L 216.5 368.15625 L 215.5 369.15625 L 215.5 369.15625 L 215.5 369.15625 L 215.5 370.15625 L 215.5 370.15625 L 214.5 370.15625 L 214.5 370.15625 L 214.5 371.15625 L 214.5 371.15625 L 214.5 370.15625 L 214.5 370.15625 L 214.5 370.15625 L 215.5 370.15625 L 215.5 369.15625 L 215.5 369.15625 L 216.5 369.15625 L 217.5 369.15625 L 218.5 368.15625 L 220.5 368.15625 L 221.5 368.15625 L 222.5 367.15625 L 224.5 367.15625 L 226.5 367.15625 L 228.5 367.15625 L 231.5 367.15625 L 232.5 367.15625 L 233.5 367.15625 L 234.5 367.15625 L 235.5 367.15625 L 236.5 367.15625 L 237.5 367.15625 L 238.5 367.15625 L 240.5 367.15625 L 241.5 367.15625 L 243.5 367.15625 L 245.5 367.15625 L 247.5 367.15625 L 250.5 366.15625 L 252.5 366.15625 L 257.5 366.15625 L 258.5 366.15625 L 259.5 366.15625 L 260.5 366.15625 L 260.5 366.15625 L 261.5 366.15625 L 261.5 366.15625 L 261.5 366.15625 L 261.5 366.15625 L 262.5 366.15625 L 262.5 366.15625 L 262.5 366.15625 L 264.5 366.15625 L 264.5 366.15625 L 265.5 366.15625 L 265.5 366.15625 L 265.5 366.15625 L 265.5 366.15625 L 266.5 365.15625 L 266.5 364.15625 L 266.5 363.15625 L 266.5 361.15625 L 266.5 357.15625 L 266.5 355.15625 L 266.5 352.15625 L 267.5 349.15625 L 267.5 347.15625 L 267.5 344.15625 L 267.5 342.15625 L 267.5 339.15625 L 267.5 337.15625 L 267.5 334.15625 L 267.5 332.15625 L 267.5 328.15625 L 267.5 325.15625 L 267.5 322.15625 L 267.5 319.15625 L 267.5 317.15625 L 267.5 313.15625 L 267.5 310.15625 L 267.5 307.15625 L 267.5 304.15625 L 267.5 301.15625 L 267.5 297.15625 L 267.5 292.15625 L 267.5 287.15625 L 267.5 284.15625 L 267.5 280.15625 L 268.5 275.15625 L 269.5 272.15625 L 269.5 268.15625 L 269.5 266.15625 L 269.5 264.15625 L 269.5 263.15625 L 269.5 262.15625 L 269.5 262.15625 L 269.5 260.15625 L 269.5 257.15625 L 269.5 254.15625 L 269.5 251.15625 L 269.5 249.15625 L 269.5 247.15625 L 269.5 246.15625 L 269.5 245.15625 L 269.5 243.15625 L 270.5 242.15625 L 270.5 241.15625 L 270.5 240.15625 L 270.5 240.15625 L 270.5 239.15625 L 270.5 239.15625 L 270.5 238.15625 L 270.5 237.15625 L 270.5 236.15625 L 270.5 235.15625 L 270.5 235.15625 L 270.5 234.15625 L 270.5 234.15625 L 270.5 233.15625 L 270.5 233.15625 L 270.5 233.15625 L 270.5 233.15625 L 271.5 233.15625 L 272.5 233.15625 L 274.5 233.15625 L 276.5 234.15625 L 279.5 234.15625 L 282.5 234.15625 L 285.5 234.15625 L 288.5 234.15625 L 291.5 235.15625 L 293.5 235.15625 L 296.5 236.15625 L 297.5 236.15625 L 299.5 236.15625 L 300.5 236.15625 L 301.5 237.15625 L 302.5 237.15625 L 303.5 237.15625 L 304.5 237.15625 L 306.5 237.15625 L 308.5 237.15625 L 310.5 237.15625 L 312.5 236.15625 L 314.5 236.15625 L 316.5 235.15625 L 318.5 234.15625 L 320.5 234.15625 L 321.5 234.15625 L 322.5 234.15625 L 323.5 234.15625 L 324.5 233.15625 L 325.5 233.15625 L 327.5 233.15625 L 329.5 232.15625 L 330.5 232.15625 L 331.5 232.15625 L 332.5 232.15625 L 332.5 232.15625 L 333.5 231.15625 L 333.5 231.15625 L 333.5 230.15625 L 331.5 227.15625 L 329.5 225.15625 L 328.5 224.15625 L 326.5 222.15625 L 325.5 221.15625 L 322.5 219.15625 L 321.5 217.15625 L 319.5 216.15625 L 318.5 215.15625 L 316.5 213.15625 L 314.5 212.15625 L 313.5 211.15625 L 311.5 209.15625 L 309.5 207.15625 L 308.5 206.15625 L 305.5 204.15625 L 302.5 202.15625 L 296.5 200.15625 L 292.5 198.15625 L 288.5 196.15625 L 284.5 195.15625 L 279.5 192.15625 L 275.5 191.15625 L 271.5 188.15625 L 267.5 185.15625 L 263.5 182.15625 L 260.5 179.15625 L 256.5 176.15625 L 251.5 172.15625 L 248.5 169.15625 L 245.5 166.15625 L 241.5 163.15625 L 237.5 161.15625 L 233.5 159.15625 L 230.5 156.15625 L 226.5 153.15625 L 223.5 151.15625 L 220.5 148.15625 L 214.5 143.15625 L 211.5 140.15625 L 207.5 137.15625 L 204.5 135.15625 L 201.5 133.15625 L 199.5 130.15625 L 196.5 128.15625 L 193.5 126.15625 L 191.5 124.15625 L 188.5 121.15625 L 186.5 119.15625 L 184.5 117.15625 L 181.5 114.15625 L 179.5 112.15625 L 177.5 110.15625 L 175.5 108.15625 L 173.5 107.15625 L 172.5 106.15625 L 171.5 104.15625 L 170.5 104.15625 L 169.5 102.15625 L 168.5 102.15625 L 168.5 101.15625 L 167.5 100.15625 L 167.5 100.15625 L 167.5 99.15625 L 166.5 99.15625 L 166.5 98.15625 L 166.5 98.15625 L 165.5 97.15625 L 165.5 96.15625 L 165.5 96.15625 L 165.5 96.15625 L 164.5 96.15625 L 164.5 96.15625 L 164.5 96.15625 L 162.5 97.15625 L 161.5 99.15625 L 159.5 100.15625 L 157.5 102.15625 L 154.5 105.15625 L 151.5 108.15625 L 147.5 111.15625 L 142.5 115.15625 L 139.5 117.15625 L 137.5 118.15625 L 134.5 121.15625 L 132.5 122.15625 L 129.5 124.15625 L 126.5 127.15625 L 123.5 129.15625 L 118.5 133.15625 L 114.5 135.15625 L 109.5 138.15625 L 103.5 143.15625 L 98.5 146.15625 L 94.5 149.15625 L 90.5 153.15625 L 85.5 157.15625 L 80.5 161.15625 L 76.5 164.15625 L 72.5 168.15625 L 67.5 172.15625 L 63.5 176.15625 L 58.5 180.15625 L 53.5 184.15625 L 50.5 187.15625 L 47.5 190.15625 L 45.5 191.15625 L 43.5 193.15625 L 42.5 195.15625 L 40.5 197.15625 L 39.5 199.15625 L 37.5 200.15625 L 36.5 201.15625 L 36.5 202.15625 L 35.5 203.15625 L 35.5 204.15625 L 34.5 205.15625 L 33.5 205.15625 L 33.5 207.15625 L 32.5 207.15625 L 31.5 208.15625 L 30.5 209.15625 L 29.5 210.15625 L 28.5 211.15625 L 27.5 212.15625 L 25.5 213.15625 L 25.5 214.15625 L 24.5 215.15625 L 24.5 215.15625 L 24.5 216.15625 L 24.5 216.15625 L 24.5 216.15625 L 25.5 216.15625 L 27.5 216.15625 L 29.5 217.15625 L 32.5 218.15625 L 35.5 218.15625 L 38.5 219.15625 L 44.5 220.15625 L 48.5 221.15625 L 53.5 222.15625 L 57.5 222.15625 L 61.5 222.15625 L 64.5 223.15625 L 67.5 223.15625 L 69.5 223.15625 L 71.5 223.15625 L 73.5 224.15625 L 74.5 224.15625 L 76.5 224.15625 L 79.5 224.15625 L 82.5 225.15625 L 85.5 225.15625 L 87.5 225.15625 L 89.5 226.15625 L 90.5 226.15625 L 91.5 226.15625 L 92.5 227.15625 L 93.5 227.15625 L 94.5 227.15625 L 94.5 227.15625 L 95.5 227.15625 L 95.5 228.15625 L 96.5 228.15625 L 96.5 228.15625 L 96.5 228.15625 L 97.5 228.15625 L 97.5 229.15625 L 97.5 229.15625 L 97.5 229.15625 L 97.5 235.15625 L 97.5 238.15625 L 97.5 240.15625 L 97.5 244.15625 L 98.5 247.15625 L 98.5 250.15625 L 99.5 253.15625 L 100.5 257.15625 L 100.5 261.15625 L 101.5 264.15625 L 101.5 266.15625 L 101.5 268.15625 L 101.5 270.15625 L 101.5 272.15625 L 101.5 274.15625 L 101.5 276.15625 L 101.5 279.15625 L 101.5 281.15625 L 101.5 284.15625 L 101.5 288.15625 L 101.5 290.15625 L 101.5 291.15625 L 101.5 293.15625 L 101.5 295.15625 L 101.5 296.15625 L 101.5 298.15625 L 101.5 300.15625 L 101.5 302.15625 L 101.5 304.15625 L 101.5 306.15625 L 101.5 308.15625 L 101.5 311.15625 L 101.5 311.15625 L 101.5 312.15625 L 101.5 315.15625 L 101.5 317.15625 L 101.5 318.15625 L 101.5 319.15625 L 102.5 320.15625 L 102.5 321.15625 L 102.5 322.15625 L 103.5 324.15625 L 103.5 326.15625 L 103.5 327.15625 L 103.5 328.15625 L 103.5 330.15625 L 104.5 331.15625 L 104.5 333.15625 L 104.5 334.15625 L 105.5 336.15625 L 105.5 338.15625 L 105.5 339.15625 L 106.5 340.15625 L 106.5 341.15625 L 106.5 343.15625 L 106.5 344.15625 L 106.5 345.15625 L 106.5 346.15625 L 107.5 347.15625 L 107.5 348.15625 L 107.5 349.15625 L 108.5 350.15625 L 108.5 351.15625 L 108.5 353.15625 L 108.5 354.15625 L 109.5 356.15625 L 109.5 358.15625 L 109.5 360.15625 L 109.5 361.15625 L 109.5 362.15625 L 110.5 363.15625 L 110.5 364.15625 L 110.5 364.15625 L 110.5 365.15625 L 110.5 365.15625 L 110.5 365.15625 L 110.5 366.15625 L 111.5 366.15625 L 111.5 366.15625 L 111.5 367.15625 L 111.5 367.15625 L 111.5 368.15625 L 111.5 368.15625 L 111.5 368.15625 L 111.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 369.15625 L 112.5 370.15625 L 112.5 370.15625 L 113.5 370.15625 L 113.5 370.15625 L 113.5 370.15625 L 113.5 371.15625 L 113.5 371.15625 L 113.5 371.15625 L 113.5 371.15625 L 114.5 371.15625", "created_by"=>2, "category_id"=>7, "created_at"=>"2020-02-19T19:39:47.826Z", "updated_at"=>"2020-02-19T19:39:47.826Z"}, "category"=>"1", "category_id"=>"7", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:50:in `update'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 7], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:52:in `update'
+[31mUnpermitted parameters: :doodle, :category, :category_id, :id[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/doodles_controller.rb:52:in `update'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:52:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:52:in `update'
+  [1m[36mDoodle Update (0.5ms)[0m  [1m[33mUPDATE "doodles" SET "title" = ?, "updated_at" = ? WHERE "doodles"."id" = ?[0m  [["title", "house updated"], ["updated_at", "2020-02-19 22:13:46.028507"], ["id", 3]]
+  ↳ app/controllers/doodles_controller.rb:52:in `update'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/doodles_controller.rb:52:in `update'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 6333)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 17:13:47 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.6ms | Allocations: 1875)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 17:14:54 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1874)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 17:45:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.3ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 1911)
+
+
+Started GET "/categories/7/doodles/3" for ::1 at 2020-02-19 17:45:43 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"7", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 7], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 2109)
+
+
+Started GET "/doodles" for ::1 at 2020-02-19 17:46:07 -0500
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1196)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 17:46:14 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.5ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 1875)
+
+
+Started GET "/categories/7/doodles/3" for ::1 at 2020-02-19 17:46:15 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"7", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 7], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 2075)
+
+
+Started GET "/doodles" for ::1 at 2020-02-19 17:46:39 -0500
+Processing by DoodlesController#public_doodles as HTML
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 1177)
+
+
+Started GET "/user/doodles" for ::1 at 2020-02-19 17:46:44 -0500
+Processing by DoodlesController#private_doodles as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mDoodle Load (0.4ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ?[0m  [["created_by", 2]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 1874)
+
+
+Started GET "/categories/7/doodles/3" for ::1 at 2020-02-19 17:46:47 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"7", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.2ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 7], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 9ms (Views: 1.1ms | ActiveRecord: 0.9ms | Allocations: 2075)
+
+
+Started GET "/categories/7/doodles/3" for ::1 at 2020-02-19 17:46:50 -0500
+Processing by DoodlesController#show as HTML
+  Parameters: {"category_id"=>"7", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:33:in `show'
+  [1m[36mDoodle Load (0.1ms)[0m  [1m[34mSELECT "doodles".* FROM "doodles" WHERE "doodles"."created_by" = ? AND "doodles"."category_id" = ? AND "doodles"."id" = ? LIMIT ?[0m  [["created_by", 2], ["category_id", 7], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/doodles_controller.rb:35:in `show'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 2075)
+
+
