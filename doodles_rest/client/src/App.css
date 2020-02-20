@@ -200,8 +200,7 @@ header {
 
 .doodles-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-flow: row-reverse wrap-reverse;
   align-items: center;
   justify-items: center;
   align-content: space-around;
