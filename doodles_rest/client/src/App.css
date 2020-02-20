@@ -226,3 +226,14 @@ header {
 .individual-doodle {
   margin: 2em 1em;
 }
+
+.main-page-image {
+  display: flex;
+  margin: 1em auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page-image img {
+  width: 28em;
+}

@@ -86,7 +86,9 @@ class App extends React.Component {
         />
 
         <Route exact path="/" render={() => (
-          <div></div>
+          <div className="main-page-image">
+            <img src="https://image.freepik.com/free-vector/cheetah-head-zentangle-style-white-black_122297-26.jpg"></img>
+          </div>
         )} />
 
         <Route path="/login" render={() => (

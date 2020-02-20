@@ -30,7 +30,7 @@ export default class PersonalDoodles extends React.Component {
               
                 <p>Title: {doodle.title}. Artist: {localStorage.getItem('name')}.</p>
               
-              
+              <Link to={`/doodles/detail/${doodle.category_id}/${doodle.id}`}>
               <div className="drawArea">
               <svg width="450px" height="450px">
                 <path d={doodle.path}
@@ -41,7 +41,8 @@ export default class PersonalDoodles extends React.Component {
                   strokeLinecap= "round"
                 />
               </svg>
-            </div>
+                </div>
+                </Link>
 
             </div>
           )}
