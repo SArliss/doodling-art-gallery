@@ -8,10 +8,7 @@ class Drawing extends Component {
     }
   }
 
-  handleSubmit = () => {
-
-  }
-
+  
   render() {
     return (
       

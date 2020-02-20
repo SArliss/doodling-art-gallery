@@ -57,6 +57,10 @@ class DrawArea extends React.Component {
   }
 
   render() {
+    let pathData = "";
+    this.state.lines.map(line => (
+      pathData = "M " + line.map(p => (
+        `${p.get('x')} ${p.get('y')}`)).join(" L ")))
 
     return (
       <div>
@@ -73,7 +77,7 @@ class DrawArea extends React.Component {
         <div
           className="doodle-form"
         >
-          <CreateDoodle lines={this.state.lines} />
+          <CreateDoodle lines={pathData} />
         </div>
 
       </div>

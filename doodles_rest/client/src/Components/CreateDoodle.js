@@ -9,6 +9,7 @@ class CreateDoodle extends React.Component {
     super(props);
 
     this.state = {
+      linesLog: ""
     }
   }
 
@@ -29,15 +30,21 @@ class CreateDoodle extends React.Component {
     })
   }
 
+  componentWillReceiveProps() {
+    this.setState({
+      linesLog: this.state.linesLog.concat(this.props.lines)
+  }, () => console.log(this.state.linesLog));
+}
+
 
   render() {
 
-    let pathData = "";
-    this.props.lines.map(line => (
-      pathData = "M " + line.map(p => (
-        `${p.get('x')} ${p.get('y')}`)).join(" L ")))
+    // let pathData = "";
+    // this.props.lines.map(line => (
+    //   pathData = "M " + line.map(p => (
+    //     `${p.get('x')} ${p.get('y')}`)).join(" L ")))
 
-    console.log(pathData)
+  // console.log(pathData)
     
     return (
       <form
@@ -45,7 +52,7 @@ class CreateDoodle extends React.Component {
           e.preventDefault();
           this.createDoodle(this.state.category, {
             "title": this.state.title,
-            "path": pathData
+            "path": this.state.linesLog
           });
         }}
       >
