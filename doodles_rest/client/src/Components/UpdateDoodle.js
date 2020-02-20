@@ -37,7 +37,7 @@ class UpdateDoodle extends Component {
   updateDoodle = async (e, category_id, id, postData) => {
     e.preventDefault();
     const res = await updateDoodle(category_id, id, postData);
-    this.props.history.push(`/user/doodles`);
+    this.props.history.push(`/user`);
   };
 
   handleChange = e => {
@@ -47,39 +47,54 @@ class UpdateDoodle extends Component {
 
   render() {
     return (
-      <form
-        onSubmit={e =>
-          this.updateDoodle(
-            e,
-            this.props.match.params.category,
-            this.props.match.params.id,
-            this.state
-          )
-        }
-      >
-        <label htmlFor="title"> Title: </label>
-        <input
-          type="text"
-          name="title"
-          value={this.state.title}
-          onChange={this.handleChange}
-        />
+      <div className="update-form">
+        <form 
+          onSubmit={e =>
+            this.updateDoodle(
+              e,
+              this.props.match.params.category,
+              this.props.match.params.id,
+              this.state
+            )
+          }
+        >
+          <label htmlFor="title"> Title: </label>
+          <input
+            type="text"
+            name="title"
+            value={this.state.title}
+            onChange={this.handleChange}
+          />
 
-        <br></br>
-        <label htmlFor="category"> Category: </label>
-        <select onChange={this.handleDropdown}>
-          <option> Please select one</option>
-          <option name="Objects" value={1}> Objects</option>
-          <option name="Animals" value={2}> Animals</option>
-          <option name="Geometric Shapes" value={3}>Geometric Shapes</option>
-          <option name="Nature" value={4}> Nature</option>
-          <option name="Human Body" value={5}> Human Body</option>
-          <option name="Food" value={6}> Food</option>
-          <option name="Others" value={7}> Others</option>
-        </select>
-        <br></br>
-        <button>Update</button>
-      </form>
+          <br></br>
+          <label htmlFor="category"> Category: </label>
+          <select onChange={this.handleDropdown}>
+            <option> Please select one</option>
+            <option name="Objects" value={1}> Objects</option>
+            <option name="Animals" value={2}> Animals</option>
+            <option name="Geometric Shapes" value={3}>Geometric Shapes</option>
+            <option name="Nature" value={4}> Nature</option>
+            <option name="Human Body" value={5}> Human Body</option>
+            <option name="Food" value={6}> Food</option>
+            <option name="Others" value={7}> Others</option>
+          </select>
+          <br></br>
+          <button>Update</button>
+        </form>
+
+        <div className="drawArea">
+          <svg width="450px" height="450px">
+            <path d={this.state.doodle.path}
+              stroke="black"
+              strokeWidth="4"
+              fill="none"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
+
+      </div>
     );
   }
 }

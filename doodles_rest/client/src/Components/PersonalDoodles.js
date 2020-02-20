@@ -13,7 +13,6 @@ export default class PersonalDoodles extends React.Component {
 
   componentDidMount = async () => {
     const doodles = await getAllUserDoodles()
-    console.log(doodles)
     this.setState({
       doodles
     })
@@ -24,19 +23,25 @@ export default class PersonalDoodles extends React.Component {
       <div>
         <div className="doodles-wrapper">
           {this.state.doodles.map(doodle =>
-            <div key={doodle.id} >
-              <Link to={`/doodles/detail/${doodle.category_id}/${doodle.id}`}>Details</Link>
+            <div key={doodle.id} className="individual-doodle">
+              
+              <Link to={`/doodles/detail/${doodle.category_id}/${doodle.id}`}>Update/Delete</Link>
 
-              <div className="doodle-info">
-                <p>Title: {doodle.title}</p>
-                <p>User ID: {doodle.created_by}</p>
-              </div>
+              
+                <p>Title: {doodle.title}. Artist: {localStorage.getItem('name')}.</p>
+              
               
               <div className="drawArea">
-                <svg width="450px" height="450px">
-                  <path d={doodle.path} stroke="black" stroke-width="4" fill="none"/>
-                </svg>
-              </div>
+              <svg width="450px" height="450px">
+                <path d={doodle.path}
+                  stroke="black"
+                  strokeWidth="4"
+                  fill="none"
+                  strokeLinejoin= "round"
+                  strokeLinecap= "round"
+                />
+              </svg>
+            </div>
 
             </div>
           )}

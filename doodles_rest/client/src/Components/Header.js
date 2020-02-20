@@ -37,7 +37,7 @@ function Header(props) {
             </ul>
 
             <div className="greeting">
-              <h1>Welcome to the gallery! Fell free to browse around, but you must register or login to create your art.</h1>
+              <h1>Welcome to the gallery! Fell free to browse the public gallery, but you must register or login to create your art.</h1>
             </div>
 
             <div className="register-login-buttons">

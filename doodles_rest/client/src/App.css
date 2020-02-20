@@ -52,14 +52,46 @@ footer {
   height: 100%;
 }
 
+.update-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 1px;
+  margin: 0 auto;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.details-container button, .update-form button  {
+  width: 222px;
+  background-color: rgb(193, 193, 193);
+}
+
+
 .login-form, .register-form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  padding: 5px 0 30px 0;
+  padding: 5px 0 15px 0;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 5px;
   width: 350px;
   height: 350px;
   text-align: center;
@@ -84,10 +116,7 @@ footer {
   align-items: center;
 }
 
-.register-login-buttons button {
-  margin: 0.5em 0.1em;
-  width: 6em;
-}
+
 
 .personal-doodle-buttons-wrapper button {
   text-align: center;
@@ -101,7 +130,7 @@ input[type=text], input[type=password]{
   background-color: rgb(255, 255, 255);
   margin: 10px;
   border: 1px solid rgb(160, 160, 160, 0.5); 
-  border-radius: 10px;
+  border-radius: 5px;
   outline: 1px solid rgba(255, 255, 255, 0);
   font-size: 1em;
   font-weight: 500;
@@ -113,19 +142,22 @@ label {
 }
 
 button {
-  width: 200px;
-  height: 40px;
-  padding: 10px;
-  background-color: rgb(255, 217, 65); 
-  border: none;
-  border-radius: 10px;
-  color: rgb(53, 53, 53);
-  text-align: center;
-  font-size: 1em;
-  font-weight: 500;
-  cursor: pointer;
+  height: 45px;
+  width: 180px;
+  padding: 0.7em 1.4em; 
+  margin: 0.3em; 
+  border-radius: 0.15em; 
+  box-sizing: border-box; 
   text-decoration: none; 
-  margin: 10px;
+  text-align: center;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: white; 
+  background-color: #ffd139; 
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17); 
+  text-align: center; 
+  position: relative;
 }
 
 nav {
@@ -173,18 +205,13 @@ header {
   align-items: center;
   justify-items: center;
   align-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 auto;
   text-align: center;
-  padding: 20px;
 }
 
-.doodle-info {
-  background-color: rgb(255, 255, 195);
-  border: 5px solid white;
-  border-radius: 20px;
-  margin: 10px auto;
-  text-align: center;
+.doodles-wrapper a {
+  font-size: larger;
 }
 
 .doodle-form {
@@ -195,4 +222,8 @@ header {
   text-align: 0 auto;
   align-items: center;
   justify-content: center;
+}
+
+.individual-doodle {
+  margin: 2em 1em;
 }

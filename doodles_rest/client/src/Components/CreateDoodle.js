@@ -1,5 +1,7 @@
 import React from 'react';
-import { createDoodleCall } from '../Services/Api-helper.js'
+import { createDoodleCall } from '../Services/Api-helper.js';
+import { withRouter } from 'react-router-dom';
+
 
 
 class CreateDoodle extends React.Component {
@@ -18,6 +20,7 @@ class CreateDoodle extends React.Component {
 
   createDoodle = async (category, doodleData) => {
     const newDoodle = await createDoodleCall(category, doodleData)
+    this.props.history.push("/user");
   }
 
   handleDropdown = (e) => {
@@ -74,4 +77,4 @@ class CreateDoodle extends React.Component {
   }
 }
 
-export default CreateDoodle
+export default withRouter(CreateDoodle);

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import {
   getOneUserDoodle,
   verifyUser,
@@ -15,7 +15,6 @@ class DoodleDetail extends Component {
     };
   }
   componentDidMount() {
-    console.log(this.props);
     verifyUser();
     this.getSingleDoodle(
       this.props.match.params.category,
@@ -30,37 +29,48 @@ class DoodleDetail extends Component {
   deleteDoodle = async (e, categoryId, doodleId) => {
     e.preventDefault();
     await deleteDoodleCall(categoryId, doodleId);
-    this.props.history.push("/user/doodles");
+    this.props.history.push("/user");
   };
 
   render() {
-    console.log(this.props);
+
     return (
-      <div>
+      <div className="details-container">
         <h1>{this.state.doodle.title}</h1>
+
+        <div >
+          <Link
+            to={`/doodles/update/${this.state.doodle.category_id}/${this.state.doodle.id}`}
+          >
+            <button>Update</button>
+          </Link>
+          <button
+            onClick={e =>
+              this.deleteDoodle(
+                e,
+                this.state.doodle.category_id,
+                this.state.doodle.id
+              )
+            }
+          >
+            Delete
+        </button>
 
         <div className="drawArea">
           <svg width="450px" height="450px">
-            <path d={this.state.doodle.path} stroke="black" stroke-width="4" fill="none"/>
+            <path d={this.state.doodle.path}
+              stroke="black"
+              strokeWidth="4"
+              fill="none"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
 
-        <Link
-          to={`/doodles/update/${this.state.doodle.category_id}/${this.state.doodle.id}`}
-        >
-          <button>Update</button>
-        </Link>
-        <button
-          onClick={e =>
-            this.deleteDoodle(
-              e,
-              this.state.doodle.category_id,
-              this.state.doodle.id
-            )
-          }
-        >
-          Delete
-        </button>
+       
+        </div>
+
       </div>
     );
   }
