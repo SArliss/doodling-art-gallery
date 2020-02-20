@@ -33,7 +33,7 @@ class App extends React.Component {
     const currentUser = await registerUser(registerData);
     if (!currentUser.errorMessage) {
       this.setState({ currentUser });
-      this.props.history.push('/');
+      this.props.history.push('/user');
     } else {
       this.setState({ errorText: currentUser.errorMessage })
     }
@@ -44,7 +44,7 @@ class App extends React.Component {
     const currentUser = await loginUser(loginData);
     if (!currentUser.errorMessage) {
       this.setState({ currentUser });
-      this.props.history.push("/");
+      this.props.history.push("/user");
     } else {
       this.setState({ errorText: currentUser.errorMessage })
     }
