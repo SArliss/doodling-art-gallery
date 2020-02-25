@@ -1,27 +1,29 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: 0 auto;
   background: linear-gradient(
       to right,
       rgb(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
     ),
     url("https://quickdraw.withgoogle.com/data/static/images/share-embed.jpg");
-  background-size: cover;
+  background-size: auto;
 }
 
-header {
+.title > a {
   text-align: center;
   font-size: 2em;
   font-family: 'Cabin Sketch', cursive;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
 }
 
 footer {
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+  background-color: white;
+  color: grey;
+  padding: 1.5em;
 }
 
 .drawArea {
@@ -49,4 +51,213 @@ footer {
 .drawing {
   width: 100%;
   height: 100%;
+}
+
+.update-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 1px;
+  margin: 0 auto;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.details-container, .eraser-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.details-container button, .update-form button, .eraser  {
+  width: 222px;
+  background-color: rgb(193, 193, 193);
+}
+
+
+.login-form, .register-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 0 15px 0;
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  border: 1px solid rgb(160, 160, 160, 0.5); 
+  box-shadow: 1px 1px 2px 0.5px #cbcbcb8a;
+}
+
+.register-login-buttons, .personal-doodle-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+
+.personal-doodle-buttons-wrapper button {
+  text-align: center;
+  margin: 0.3em;
+  padding: 5px;
+}
+
+input[type=text], input[type=password], select{
+  width: 180px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  border: 1px solid rgb(160, 160, 160, 0.5); 
+  border-radius: 5px;
+  outline: 1px solid rgba(255, 255, 255, 0);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+label {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0.5em;
+}
+
+button {
+  height: 45px;
+  width: 180px;
+  padding: 0.7em 1.4em; 
+  margin: 0.3em; 
+  border-radius: 0.15em; 
+  box-sizing: border-box; 
+  text-decoration: none; 
+  text-align: center;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: white; 
+  background-color: #ffd139; 
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17); 
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}
+
+nav {
+  margin: -10px auto;
+}
+
+nav ul, nav a {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 10px 0 10px;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: large;
+}
+
+header {
+  padding-top: 0.1em;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+
+.greeting {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto -2em auto;
+  padding: 0 2em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.755);
+  font-size: medium;
+  font-family: 'Sacramento', cursive;
+  color: rgb(53, 53, 53);
+}
+
+.doodles-wrapper {
+  display: flex;
+  flex-flow: row-reverse wrap-reverse;
+  align-items: center;
+  justify-items: center;
+  align-content: space-around;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.doodles-wrapper a {
+  font-size: larger;
+}
+
+.doodle-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-doodle-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-title-category-fields {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+  text-align: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.individual-doodle {
+  margin: 2em 1em;
+}
+
+.main-page-image {
+  display: flex;
+  margin: 1em auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page-image img {
+  width: 28em;
 }
