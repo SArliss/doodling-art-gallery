@@ -13,7 +13,7 @@ class CreateDoodle extends React.Component {
     }
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
@@ -36,18 +36,15 @@ class CreateDoodle extends React.Component {
   }, () => console.log(this.state.linesLog));
 }
 
-
-  render() {
-
-    // let pathData = "";
-    // this.props.lines.map(line => (
-    //   pathData = "M " + line.map(p => (
-    //     `${p.get('x')} ${p.get('y')}`)).join(" L ")))
-
-  // console.log(pathData)
-    
+  render() {    
     return (
-      <form
+      <div>
+ 
+      <div className="eraser-wrapper">
+        <button className="eraser" onClick={() => window.location.reload(false)}>Erase</button>
+      </div> 
+
+      <form className="submit-doodle-form"
         onSubmit={e => {
           e.preventDefault();
           this.createDoodle(this.state.category, {
@@ -55,16 +52,18 @@ class CreateDoodle extends React.Component {
             "path": this.state.linesLog
           });
         }}
-      >
+        >
+        <div className="submit-title-category-fields">
         <label htmlFor="title"> Title: </label>
         <input
           type="text"
           name="title"
           value={this.state.title}
           onChange={this.handleChange}
-        />
+            />
+        </div>
        
-        <br></br>
+        <div className="submit-title-category-fields">
         <label htmlFor="category"> Category: </label>
         <select onChange={this.handleDropdown}>
           <option> Please select one</option>
@@ -75,11 +74,12 @@ class CreateDoodle extends React.Component {
           <option name="Human Body" value={5}> Human Body</option>
           <option name="Food" value={6}> Food</option>
           <option name="Others" value={7}> Others</option>
-        </select>
-        <br></br>
+            </select>
+        </div>
         <button>Submit</button>
-      </form>
-      
+        </form>
+        
+      </div>
     )
   }
 }

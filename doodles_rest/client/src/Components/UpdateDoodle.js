@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { updateDoodle } from "../Services/Api-helper";
+import { updateDoodle, deleteDoodleCall } from "../Services/Api-helper";
 import { getOneUserDoodle } from "../Services/Api-helper";
 import { withRouter } from "react-router-dom";
 
@@ -45,9 +45,16 @@ class UpdateDoodle extends Component {
     this.setState({ [name]: value });
   };
 
+  deleteDoodle = async (e, categoryId, doodleId) => {
+    e.preventDefault();
+    await deleteDoodleCall(categoryId, doodleId);
+    this.props.history.push("/user");
+  };
+
   render() {
     return (
       <div className="update-form">
+
         <form 
           onSubmit={e =>
             this.updateDoodle(
@@ -58,6 +65,7 @@ class UpdateDoodle extends Component {
             )
           }
         >
+          <p>At this moment, only title and category fields can be updated, thank you.</p>
           <label htmlFor="title"> Title: </label>
           <input
             type="text"
@@ -82,6 +90,18 @@ class UpdateDoodle extends Component {
           <button>Update</button>
         </form>
 
+        <button
+            onClick={e =>
+              this.deleteDoodle(
+                e,
+                this.state.doodle.category_id,
+                this.state.doodle.id
+              )
+            }
+          >
+            Delete
+        </button>
+
         <div className="drawArea">
           <svg width="450px" height="450px">
             <path d={this.state.doodle.path}
@@ -92,7 +112,7 @@ class UpdateDoodle extends Component {
               strokeLinecap="round"
             />
           </svg>
-        </div>
+        </div> 
 
       </div>
     );
