@@ -1,5 +1,5 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   margin: 0 auto;
   background: linear-gradient(
       to right,
@@ -19,11 +19,14 @@ body {
   font-size: 1.5em;
 }
 
-footer {
+footer, footer a {
   text-align: center;
-  background-color: white;
   color: grey;
-  padding: 1.5em;
+  margin: 4em auto 1em auto;
+}
+
+footer a {
+  color: grey;
 }
 
 .drawArea {
@@ -152,7 +155,6 @@ button {
   box-sizing: border-box; 
   text-decoration: none; 
   text-align: center;
-  font-family: 'Roboto Mono', sans-serif;
   font-weight: normal;
   font-size: 18px;
   color: white; 
@@ -253,11 +255,11 @@ header {
 
 .main-page-image {
   display: flex;
-  margin: 1em auto;
+  margin-top: 2em;
   align-items: center;
   justify-content: center;
 }
 
 .main-page-image img {
-  width: 28em;
+  width: 20vw;
 }
