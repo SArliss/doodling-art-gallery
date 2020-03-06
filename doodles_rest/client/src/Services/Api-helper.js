@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   // baseURL: "http://localhost:3000"
-  baseURL: "https://shrouded-garden-55385.herokuapp.com/"
+  baseURL: "https://shrouded-garden-55385.herokuapp.com"
 })
 
 // AUTH
