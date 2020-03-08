@@ -56,19 +56,16 @@ class DoodleDetail extends Component {
             Delete
         </button>
 
-        <div className="drawArea">
-          <svg width="450px" height="450px">
-            <path d={this.state.doodle.path}
-              stroke="black"
-              strokeWidth="4"
-              fill="none"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
+          <div className="drawArea">
+            <svg className="drawing">
+              <path
+                className="path"
+                d={this.state.doodle.path}
+              />
+            </svg>
+          </div>
 
-       
+
         </div>
 
       </div>

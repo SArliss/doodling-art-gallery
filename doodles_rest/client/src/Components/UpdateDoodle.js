@@ -105,16 +105,13 @@ class UpdateDoodle extends Component {
         </button>
 
         <div className="drawArea">
-          <svg width="450px" height="450px">
-            <path d={this.state.doodle.path}
-              stroke="black"
-              strokeWidth="4"
-              fill="none"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div> 
+                  <svg className="drawing">
+                    <path
+                      className="path"
+                      d={this.state.doodle.path}
+                    />
+                  </svg>
+                </div>
 
       </div>
     );

@@ -29,7 +29,7 @@ footer p, footer a {
   margin: 0;
   padding: 1em;
   color: grey;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .drawArea {
@@ -96,11 +96,11 @@ footer p, footer a {
   flex-wrap: wrap;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  padding: 5px 0 15px 0;
+  padding: 0px 0 10px 0;
   margin: 0 auto;
   border-radius: 5px;
   width: 350px;
-  height: 350px;
+  height: 340px;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -166,6 +166,7 @@ button {
   position: relative;
   align-items: center;
   justify-items: center;
+  cursor: pointer;
 }
 
 nav {
@@ -187,7 +188,7 @@ nav ul, nav a {
 }
 
 header {
-  padding-top: 0.1em;
+  padding-top: 0;
   background-color: rgba(255, 255, 255, 0.557);
   margin: 0 auto;
 }
@@ -279,6 +280,10 @@ header {
 
 .individual-doodle {
   margin: 2em 1em;
+}
+
+.individual-doodle p, .individual-doodle a {
+  font-size: 1em;
 }
 
 .main-page-image {
