@@ -36,8 +36,13 @@ function Header(props) {
               <Link to="/public"><li>Public Gallery</li></Link>
             </ul>
 
-            <div className="greeting">
-              <h1>Welcome to the gallery! Fell free to browse the public gallery, but you must register or login to create your art.</h1>
+            <div className="greeting-landing">
+              <p>Welcome to Doodling Art!
+              <br></br>
+                Fell free to browse the public gallery. Register or login to create your art.
+                 At this moment, the drawing area is only compatible with mouse events.
+                 Touchscreen is a feature currently under development for the mobile version. 
+               </p>
             </div>
 
             <div className="register-login-buttons">

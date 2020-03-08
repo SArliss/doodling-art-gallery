@@ -87,7 +87,7 @@ class App extends React.Component {
 
         <Route exact path="/" render={() => (
           <div className="main-page-image">
-            <img src="https://image.freepik.com/free-vector/cheetah-head-zentangle-style-white-black_122297-26.jpg"></img>
+            <img src="https://cdn.pixabay.com/photo/2016/03/31/15/05/cat-1292989_1280.png"></img>
           </div>
         )} />
 
@@ -113,7 +113,6 @@ class App extends React.Component {
 
         <Route exact path="/user" render={() => (
           <PersonalDoodles />
-          // <h1>Hello</h1>
         )} />
 
         <Route path="/drawing-page" render={() => (
