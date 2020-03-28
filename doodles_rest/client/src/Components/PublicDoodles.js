@@ -1,5 +1,6 @@
 import React from 'react';
-import { getPublicDoodles } from '../Services/Api-helper.js'
+import { getPublicDoodles } from '../Services/Api-helper.js';
+import swal from 'sweetalert';
 
 export default class PublicDoodles extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class PublicDoodles extends React.Component {
   }
 
   render() {
+    swal("Loading public gallery in 3, 2, 1...");
     return (
       <div>
         <div className="doodles-wrapper">
