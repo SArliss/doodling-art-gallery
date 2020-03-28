@@ -19,7 +19,7 @@ export default class PublicDoodles extends React.Component {
   }
 
   render() {
-    swal("Loading public gallery in 3, 2, 1...");
+    swal("Loading public gallery. It might take a fews seconds. Thank you!");
     return (
       <div>
         <div className="doodles-wrapper">
