@@ -128,9 +128,15 @@ footer a:hover {
   justify-items: center;
 }
 
-.details-container button {
+.delete {
   margin: 0 3px;
-  width: 222px;
+  width: 99px;
+  background-color: rgb(185, 74, 74);
+}
+
+.update {
+  margin: 0 3px;
+  width: 99px;
   background-color: rgb(193, 193, 193);
 }
 
@@ -405,6 +411,11 @@ header {
 
   .eraser-wrapper {
     position: inherit;
+  }
+
+  .drawArea{
+    width: 350px;
+    height: 350px;
   }
 
 }
