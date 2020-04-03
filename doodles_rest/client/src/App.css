@@ -21,15 +21,19 @@ body {
 
 footer {
   text-align: center;
-  margin: 0 auto;
-  background-color: white;
+  margin: 1em auto;
 }
 
-footer p, footer a {
+footer a {
   margin: 0;
   padding: 1em;
   color: grey;
   font-size: 13px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .drawArea {
@@ -42,8 +46,18 @@ footer p, footer a {
   width: 450px;
   height: 450px;
   border: 1px solid rgb(130, 130, 130);
-  box-shadow: 3px 3px 5px 6px rgb(176, 176, 176);
+  box-shadow: 3px 3px 5px 2px rgb(176, 176, 176);
   background-color: white;
+}
+
+.drawArea-collection {
+  display: flex;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(130, 130, 130);
+  box-shadow: 3px 3px 5px 1px rgb(176, 176, 176);
+  background-color: rgb(255, 255, 255);
 }
 
 .path {
@@ -85,10 +99,12 @@ footer p, footer a {
 
 .eraser-wrapper {
   position: absolute;
-  bottom: 25.7em;
+  bottom: 26em;
   left: 24.9em;
   right: 0;
   margin: 0 auto;
+  width: 3em;
+  height: 2em;
   text-align: center;
 }
 
@@ -299,6 +315,12 @@ header {
   font-size: larger;
 }
 
+.doodle-info p {
+  margin: 0;
+  font-size: 1.5em;
+  font-family: 'Sacramento', cursive;
+}
+
 .doodle-form {
   display: flex;
   flex-wrap: wrap;
@@ -336,13 +358,23 @@ header {
   margin: 0.5em;
 }
 
-.individual-doodle-update-delete {
-  margin: 0.7em;
+.individual-doodle-title p {
+  font-family: 'Sacramento', cursive;
+  font-size: 1.5em;
+  margin: 0.2em auto;
+  text-align: center;
 }
 
-.individual-doodle-update-delete p, .individual-doodle-update-delete a {
+.individual-doodle-update-delete {
+  margin: 0.6em;
+}
+
+.individual-doodle-update-delete a{
+  margin: 0.5em auto;
   font-size: 1em;
-  margin: 0.4em;
+  box-shadow: 3px 3px 5px 1px rgb(176, 176, 176);
+  background-color: rgba(215, 215, 215, 0.541);
+  padding: 0.4em 3em;
 }
 
 .main-page-image {

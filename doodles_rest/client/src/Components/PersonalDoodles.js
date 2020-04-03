@@ -46,22 +46,26 @@ export default class PersonalDoodles extends React.Component {
           {this.state.doodles.map(doodle =>
             <div key={doodle.id} className="individual-doodle">
 
-              <div className="individual-doodle-update-delete">
+              <div className="individual-doodle-title">
                 <p>{doodle.title} by {localStorage.getItem('name')}.</p>
-                <Link to={`/doodles/detail/${doodle.category_id}/${doodle.id}`}>Update/Delete</Link>
               </div>
 
               <Link to={`/doodles/detail/${doodle.category_id}/${doodle.id}`}>
-                <div className="drawArea">
-                  <svg className="drawing">
-                    <path
-                      className="path"
-                      d={doodle.path}
-                    />
-                  </svg>
-                </div>
+                <div className="drawArea-collection">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" 
+                  width="100%" overflow="hidden">
+                  <path
+                    className="path"
+                    d={doodle.path}
+                  />
+                </svg>
+              </div>
               </Link>
 
+              <div className="individual-doodle-update-delete">
+              <Link to={`/doodles/detail/${doodle.category_id}/${doodle.id}`}>Update/Delete</Link>
+              </div>
+                
             </div>
           )}
         </div>

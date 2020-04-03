@@ -46,11 +46,12 @@ export default class PublicDoodles extends React.Component {
             <div key={doodle.id} className="individual-doodle">
 
               <div className="doodle-info">
-                <p>Title: {doodle.title}</p>
+                <p>{doodle.title}</p>
               </div>
 
-              <div className="drawArea">
-                <svg className="drawing">
+              <div className="drawArea-collection">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" 
+                  width="100%" overflow="hidden">
                   <path
                     className="path"
                     d={doodle.path}
