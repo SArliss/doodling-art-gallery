@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { updateDoodle, deleteDoodleCall } from "../Services/Api-helper";
+import { updateDoodle } from "../Services/Api-helper";
 import { getOneUserDoodle } from "../Services/Api-helper";
 import { withRouter } from "react-router-dom";
-import swal from 'sweetalert';
 
 class UpdateDoodle extends Component {
   constructor(props) {
@@ -37,20 +36,13 @@ class UpdateDoodle extends Component {
 
   updateDoodle = async (e, category_id, id, postData) => {
     e.preventDefault();
-    swal("Updating your art might take a few seconds. Thanks!");
-    const res = await updateDoodle(category_id, id, postData);
+    await updateDoodle(category_id, id, postData);
     this.props.history.push(`/user`);
   };
 
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-  };
-
-  deleteDoodle = async (e, categoryId, doodleId) => {
-    e.preventDefault();
-    await deleteDoodleCall(categoryId, doodleId);
-    this.props.history.push("/user");
   };
 
   render() {
@@ -67,7 +59,7 @@ class UpdateDoodle extends Component {
             )
           }
         >
-          <p>At this moment, only title and category fields can be updated, thank you.</p>
+          <p>You can update title and/or category fields.</p>
           <label htmlFor="title"> Title: </label>
           <input
             type="text"
@@ -91,18 +83,6 @@ class UpdateDoodle extends Component {
           <br></br>
           <button>Update</button>
         </form>
-
-        <button
-            onClick={e =>
-              this.deleteDoodle(
-                e,
-                this.state.doodle.category_id,
-                this.state.doodle.id
-              )
-            }
-          >
-            Delete
-        </button>
 
         <div className="drawArea">
                   <svg className="drawing">

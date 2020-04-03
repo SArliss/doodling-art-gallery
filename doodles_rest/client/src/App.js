@@ -80,6 +80,7 @@ class App extends React.Component {
       <div className="App">
 
         <Header
+          handleLogin={this.handleLogin}
           loggedIn={this.state.currentUser}
           handleLogout={this.handleLogout}
           currentUser={this.state.currentUser}
@@ -87,7 +88,7 @@ class App extends React.Component {
 
         <Route exact path="/" render={() => (
           <div className="main-page-image">
-            <img src="https://cdn.pixabay.com/photo/2016/03/31/15/05/cat-1292989_1280.png"></img>
+            <img src="https://cdn.pixabay.com/photo/2016/03/31/15/05/cat-1292989_1280.png" alt="cat drawing"></img>
           </div>
         )} />
 

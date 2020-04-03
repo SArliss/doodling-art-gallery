@@ -25,8 +25,8 @@ function Header(props) {
             </div>
 
             <div className="personal-doodle-buttons-wrapper">
-              <Link to="/drawing-page"><button>✎ Let's draw</button></Link>
-              <Link to="/user"><button>🔍 My gallery</button></Link>
+              <Link to="/drawing-page"><button> Let's draw</button></Link>
+              <Link to="/user"><button> My gallery</button></Link>
             </div>
           </div>
           :
@@ -37,17 +37,18 @@ function Header(props) {
             </ul>
 
             <div className="greeting-landing">
-              <p>Welcome to Doodling Art!
+              <p>Welcome to the Doodling Art Gallery!
               <br></br>
-                Fell free to browse the public gallery. Register or login to create your art.
                  At this moment, the drawing area is only compatible with mouse events.
-                 Touchscreen is a feature currently under development for the mobile version. 
+              <br></br>
+                 Touchscreen (mobile feature) is under development. 
                </p>
             </div>
 
             <div className="register-login-buttons">
               <Link to="/register"><button>Register</button></Link>
               <Link to="/login"><button>Login</button></Link>
+              <button id="guest-button" onClick={(e) => props.handleLogin(e, {email: "guest", password: "guest"})}>Guest</button>
             </div>
           </div>
         }

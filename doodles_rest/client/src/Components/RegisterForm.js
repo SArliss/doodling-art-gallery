@@ -54,7 +54,7 @@ export default class RegisterForm extends Component {
               onChange={this.handleChange}
             />
             <br></br>
-            <button>Submit!</button>
+            <button>Submit</button>
           </form>
         </div>
       </div>

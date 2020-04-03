@@ -90,7 +90,6 @@ footer p, footer a {
   background-color: rgb(193, 193, 193);
 }
 
-
 .login-form, .register-form {
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +99,7 @@ footer p, footer a {
   margin: 0 auto;
   border-radius: 5px;
   width: 350px;
-  height: 340px;
+  height: 300px;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -123,24 +122,31 @@ footer p, footer a {
   align-items: center;
 }
 
+.register-login-buttons * {
+ margin: 0.1em;
+ padding: 0;
+ font-size: 18px;
+}
 
+#guest-button {
+  background-color: rgb(240, 165, 53);
+ }
 
 .personal-doodle-buttons-wrapper button {
-  text-align: center;
-  margin: 0.3em;
-  padding: 5px;
+  min-width: 10em;
 }
 
 input[type=text], input[type=password], select{
   width: 180px;
   padding: 5px;
   background-color: rgb(255, 255, 255);
-  margin: 10px;
+  margin: 5px;
   border: 1px solid rgb(160, 160, 160, 0.5); 
   border-radius: 5px;
   outline: 1px solid rgba(255, 255, 255, 0);
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: rgb(63, 63, 63);
 }
 
 label {
@@ -150,22 +156,19 @@ label {
 }
 
 button {
-  height: 45px;
-  width: 180px;
-  padding: 0.7em 1.4em; 
-  margin: 0.3em; 
+  height: 2.5em;
+  width: 5em;
+  padding: 0.5em;  
+  margin: 0.2em auto;
   border-radius: 0.15em; 
   box-sizing: border-box; 
   text-decoration: none; 
   text-align: center;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1em;
   color: white; 
   background-color: #ffd139; 
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17); 
-  position: relative;
-  align-items: center;
-  justify-items: center;
   cursor: pointer;
 }
 
@@ -213,7 +216,7 @@ header {
   flex-direction: column;
   margin: 0 auto;
   max-width: 46em;
-  padding: 0 3em;
+  padding: 0 1em;
   line-height: 1.5em;
   text-align: center;
   align-items: center;
@@ -231,6 +234,7 @@ header {
 .greeting h1 {
   font-family: 'Sacramento', cursive;
   font-size: 2em;
+  margin: 0.5em 0 0 0;
 } 
 
 .doodles-wrapper {
@@ -279,11 +283,16 @@ header {
 }
 
 .individual-doodle {
-  margin: 2em 1em;
+  margin: 0.5em;
 }
 
-.individual-doodle p, .individual-doodle a {
+.individual-doodle-update-delete {
+  margin: 0.7em;
+}
+
+.individual-doodle-update-delete p, .individual-doodle-update-delete a {
   font-size: 1em;
+  margin: 0.4em;
 }
 
 .main-page-image {
@@ -295,4 +304,17 @@ header {
 
 .main-page-image img {
   width: 19vw;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .register-login-buttons {
+    padding: 0.5em 0;
+  }
+
+  nav a {
+    padding: 0;
+    margin: 0.5em;
+}
+
 }
