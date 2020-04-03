@@ -6,20 +6,41 @@ export default class PublicDoodles extends React.Component {
     super(props)
 
     this.state = {
-      doodles: []
+      doodles: [],
+      isLoading: false,
+      error: ""
     }
   }
 
   componentDidMount = async () => {
-    const doodles = await getPublicDoodles()
-    this.setState({
-      doodles
-    })
+    this.setState({ isLoading: true })
+    try {
+      const doodles = await getPublicDoodles()
+      this.setState({
+        doodles,
+        isLoading: false
+      })
+    } catch (e) {
+      this.setState({
+        isLoading: false,
+        error: e.message
+      })
+    }
   }
 
   render() {
     return (
       <div>
+
+        <div className="loading-message">
+          {this.state.isLoading &&
+            <div>
+              <div className="loader"></div>
+              <p>Loading doodles...</p>
+            </div>}
+          {this.state.error && <p className="error">{this.state.error}</p>}
+        </div>
+
         <div className="doodles-wrapper">
           {this.state.doodles.map(doodle =>
             <div key={doodle.id} className="individual-doodle">

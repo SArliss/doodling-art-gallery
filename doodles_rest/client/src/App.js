@@ -15,7 +15,6 @@ import DrawArea from './Components/DrawArea';
 import UpdateDoodle from './Components/UpdateDoodle';
 import DoodleDetail from './Components/DoodleDetail';
 
-
 class App extends React.Component {
   constructor() {
     super();
@@ -72,7 +71,6 @@ class App extends React.Component {
       })
     }
   }
-
 
 
   render() {

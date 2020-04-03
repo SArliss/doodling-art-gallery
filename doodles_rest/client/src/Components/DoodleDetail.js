@@ -36,7 +36,7 @@ class DoodleDetail extends Component {
 
     return (
       <div className="details-container">
-        <h1>{this.state.doodle.title}</h1>
+        <h3>{this.state.doodle.title}</h3>
 
         <div >
           <Link

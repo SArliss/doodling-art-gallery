@@ -74,7 +74,34 @@ footer p, footer a {
   justify-items: center;
 }
 
-.details-container, .eraser-wrapper {
+.update-form form {
+  margin: 1em;
+}
+
+.update-form button {
+  width: 222px;
+  background-color: rgb(193, 193, 193);
+}
+
+.eraser-wrapper {
+  position: absolute;
+  bottom: 25.7em;
+  left: 24.9em;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eraser {
+  background-color: rgba(188, 143, 143, 0.392);
+  padding: 0;
+  width: 3em;
+  height: 2em;
+  border: none;
+  box-shadow: none;
+}
+
+.details-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -85,7 +112,8 @@ footer p, footer a {
   justify-items: center;
 }
 
-.details-container button, .update-form button, .eraser  {
+.details-container button {
+  margin: 0 3px;
   width: 222px;
   background-color: rgb(193, 193, 193);
 }
@@ -196,6 +224,25 @@ header {
   margin: 0 auto;
 }
 
+.loading-message {
+  text-align: center;
+}
+
+.loader {
+  margin: 1em auto;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .greeting {
   display: flex;
   flex-wrap: wrap;
@@ -266,10 +313,13 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0.5em;
   margin: 0 auto;
   text-align: 0 auto;
-  align-items: center;
-  justify-content: center;
+}
+
+.submit-doodle-form input, .update-form input {
+  width: 14em;
 }
 
 .submit-title-category-fields {
@@ -306,6 +356,10 @@ header {
   width: 19vw;
 }
 
+.error {
+  color: red;
+}
+
 @media only screen and (max-width: 600px) {
 
   .register-login-buttons {
@@ -315,6 +369,10 @@ header {
   nav a {
     padding: 0;
     margin: 0.5em;
-}
+  }
+
+  .eraser-wrapper {
+    bottom: 21em;
+  }
 
 }

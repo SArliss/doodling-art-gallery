@@ -9,7 +9,9 @@ class UpdateDoodle extends Component {
     this.state = {
       title: "",
       path: "",
-      doodle: []
+      doodle: [],
+      isLoading: false,
+      error: ""
     };
   }
   componentDidMount = () => {
@@ -36,9 +38,18 @@ class UpdateDoodle extends Component {
 
   updateDoodle = async (e, category_id, id, postData) => {
     e.preventDefault();
-    await updateDoodle(category_id, id, postData);
-    this.props.history.push(`/user`);
-  };
+    this.setState({ isLoading: true })
+    try {
+      await updateDoodle(category_id, id, postData);
+      this.props.history.push(`/user`);
+      this.setState({ isLoading: false });
+    } catch (e) {
+      this.setState({
+        isLoading: false,
+        error: e.message
+      })
+    }
+  }
 
   handleChange = e => {
     const { name, value } = e.target;
@@ -49,7 +60,16 @@ class UpdateDoodle extends Component {
     return (
       <div className="update-form">
 
-        <form 
+        <div className="loading-message">
+          {this.state.isLoading &&
+            <div>
+              <div className="loader"></div>
+              <p>Updating doodle...</p>
+            </div>}
+          {this.state.error && <p className="error">{this.state.error}</p>}
+        </div>
+
+        <form
           onSubmit={e =>
             this.updateDoodle(
               e,
@@ -85,13 +105,13 @@ class UpdateDoodle extends Component {
         </form>
 
         <div className="drawArea">
-                  <svg className="drawing">
-                    <path
-                      className="path"
-                      d={this.state.doodle.path}
-                    />
-                  </svg>
-                </div>
+          <svg className="drawing">
+            <path
+              className="path"
+              d={this.state.doodle.path}
+            />
+          </svg>
+        </div>
 
       </div>
     );
