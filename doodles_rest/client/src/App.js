@@ -23,29 +23,44 @@ class App extends React.Component {
       email: "",
       password: "",
       currentUser: null,
-      errorText: ""
+      errorText: "",
+      isLogging: false
     }
   }
 
   handleRegister = async (e, registerData) => {
     e.preventDefault();
+    this.setState({ isLogging: true })
     const currentUser = await registerUser(registerData);
     if (!currentUser.errorMessage) {
-      this.setState({ currentUser });
+      this.setState({
+        currentUser,
+        isLogging: false
+      });
       this.props.history.push('/user');
     } else {
-      this.setState({ errorText: currentUser.errorMessage })
+      this.setState({
+        errorText: currentUser.errorMessage,
+        isLogging: false
+      })
     }
   }
 
   handleLogin = async (e, loginData) => {
     e.preventDefault();
+    this.setState({ isLogging: true })
     const currentUser = await loginUser(loginData);
     if (!currentUser.errorMessage) {
-      this.setState({ currentUser });
+      this.setState({
+        currentUser,
+        isLogging: false
+      });
       this.props.history.push("/user");
     } else {
-      this.setState({ errorText: currentUser.errorMessage })
+      this.setState({
+        errorText: currentUser.errorMessage,
+        isLogging: false
+      })
     }
   }
 
@@ -83,6 +98,15 @@ class App extends React.Component {
           handleLogout={this.handleLogout}
           currentUser={this.state.currentUser}
         />
+
+        <div className="loading-message">
+          {this.state.isLogging &&
+            <div>
+              <div className="loader"></div>
+              <p>Logging...</p>
+            </div>}
+          {this.state.error && <p className="error">{this.state.error}</p>}
+        </div>
 
         <Route exact path="/" render={() => (
           <div className="main-page-image">
