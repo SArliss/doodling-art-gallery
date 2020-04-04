@@ -35,7 +35,8 @@ class App extends React.Component {
     if (!currentUser.errorMessage) {
       this.setState({
         currentUser,
-        isLogging: false
+        isLogging: false,
+        errorText: ""
       });
       this.props.history.push('/user');
     } else {
@@ -53,7 +54,8 @@ class App extends React.Component {
     if (!currentUser.errorMessage) {
       this.setState({
         currentUser,
-        isLogging: false
+        isLogging: false,
+        errorText: ""
       });
       this.props.history.push("/user");
     } else {
@@ -61,6 +63,7 @@ class App extends React.Component {
         errorText: currentUser.errorMessage,
         isLogging: false
       })
+      this.props.history.push("/login");
     }
   }
 
@@ -105,7 +108,7 @@ class App extends React.Component {
               <div className="loader"></div>
               <p>Logging...</p>
             </div>}
-          {this.state.error && <p className="error">{this.state.error}</p>}
+          {this.state.errorText && <p className="error">{this.state.errorText}</p>}
         </div>
 
         <Route exact path="/" render={() => (

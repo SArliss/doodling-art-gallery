@@ -19,7 +19,7 @@ export const loginUser = async (loginData) => {
     return resp.data.user;
   } catch (e) {
     if (e.response && e.response.status === 401) {
-      return { errorMessage: `Email/password is incorrect, or user is already loggedin!` };
+      return { errorMessage: `Email or password is incorrect` };
     }
   }
 }
