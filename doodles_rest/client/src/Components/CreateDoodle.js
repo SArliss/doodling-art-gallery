@@ -39,7 +39,7 @@ class CreateDoodle extends React.Component {
     })
   }
 
-  componentWillReceiveProps() {
+  UNSAFE_componentWillReceiveProps() {
     this.setState({
       linesLog: this.state.linesLog.concat(this.props.lines)
     }, () => console.log(this.state.linesLog));

@@ -98,21 +98,12 @@ footer a:hover {
 }
 
 .eraser-wrapper {
-  position: absolute;
-  bottom: 26em;
-  left: 24.9em;
-  right: 0;
-  margin: 0 auto;
-  width: 3em;
-  height: 2em;
   text-align: center;
 }
 
 .eraser {
   background-color: rgba(188, 143, 143, 0.392);
-  padding: 0;
-  width: 3em;
-  height: 2em;
+  padding: 0 1em;
   border: none;
   box-shadow: none;
 }
