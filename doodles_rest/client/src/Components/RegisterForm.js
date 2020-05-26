@@ -27,31 +27,28 @@ export default class RegisterForm extends Component {
           <form onSubmit={(e) => this.props.handleRegister(e, this.state)}>
             {this.state.errorText && <p className="error-text">{this.state.errorText}</p>}
             <h2>Register</h2>
-            <label htmlFor="name">Name</label>
-            <br></br>
             <input
               type="text"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
+              placeholder="name"
             />
-            <br></br>
-            <label htmlFor="email">Email</label>
             <br></br>
             <input
               type="text"
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
+              placeholder="email"
             />
-            <br></br>
-            <label htmlFor="password">Password</label>
             <br></br>
             <input
               type="password"
               name="password"
               value={this.state.password}
               onChange={this.handleChange}
+              placeholder="password"
             />
             <br></br>
             <button>Submit</button>

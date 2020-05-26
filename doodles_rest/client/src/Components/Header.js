@@ -39,7 +39,7 @@ function Header(props) {
             <div className="greeting-landing">
               <p>Welcome to the Doodling Art Gallery!
               <br></br>
-                 At this moment, the drawing area is only compatible with mouse and touchpads events.
+                 The drawing area is compatible with mouse and touchpads events.
               <br></br>
                  Drawing with touchscreen is a feature under development for our mobile app. 
                </p>
